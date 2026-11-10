@@ -5,7 +5,7 @@
     "security": {"catalog": "security/repos-catalog.md", "count": 288, "scope": "repositórios de pesquisa defensiva"},
     "mcp_servers": {"catalog": "security/mcp-servers.md", "count": 30, "scope": "inventário, não instalados"},
     "skills": {"catalog": "security/skills-catalog.md", "count": 32, "scope": "inventário, não instalados"},
-    "websites": {"catalog": "websites/", "count": 5, "scope": "bancos de exploits, vulnerabilidades, rede, hash, anonimato"},
+    "websites": {"catalog": "websites/", "count": 6, "scope": "bancos de exploits, vulnerabilidades e vírus, rede e IP, hash, anonimato, diretórios de ferramentas"},
     "youtube": {"catalog": "youtube/fontes-aprendizado.json", "count": 10, "scope": "fila de estudo, não assistidos"},
     "creative": {"catalog": "creative/", "count": 3, "scope": "ferramentas de design, inspiração e áudio/efeitos sonoros"},
     "external": {"catalog": "external/", "count": 2, "scope": "projetos GitHub e recursos de aprendizado"}

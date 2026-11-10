@@ -1,4 +1,5 @@
 import argparse
+import re
 import importlib.util
 import io
 import json
@@ -92,7 +93,7 @@ class CatalogTest(unittest.TestCase):
 
     def test_policy_version(self):
         cfg = json.loads((ROOT / 'config/policy.json').read_text())
-        self.assertEqual(cfg['version'], '1.2.0')
+        self.assertEqual(cfg['version'], '1.2.1')
 
     def test_validate_json_files(self):
         for jfile in (ROOT / 'references').rglob('*.json'):
@@ -158,6 +159,64 @@ class AudioTest(unittest.TestCase):
         self.assertEqual(body['references'], [{'audio': 'UklGRg==', 'text': 'amostra'}])
         self.assertNotIn('reference_audio', body)
         self.assertEqual(quebrador.build_tts_body('oi'), {'text': 'oi', 'format': 'wav'})
+
+
+class CatalogCommandTest(unittest.TestCase):
+    def _run(self, **kw):
+        args = argparse.Namespace(**{'category': None, 'search': None, **kw})
+        with mock.patch('builtins.print'):
+            return quebrador.catalog(args)
+
+    def test_every_domain_returns_rows(self):
+        for domain in ('repos', 'mcp', 'skills', 'web', 'creative', 'external', 'yt'):
+            self.assertTrue(self._run(domain=domain), domain)
+
+    def test_filters(self):
+        c2 = self._run(domain='repos', category='C2')
+        self.assertEqual(len(c2), 18)
+        self.assertTrue(any('BishopFox/sliver' in line for line in c2))
+        self.assertEqual(len(self._run(domain='mcp')), 30)
+        self.assertEqual(len(self._run(domain='skills')), 32)
+        self.assertEqual(len(self._run(domain='yt')), 10)
+        self.assertTrue(any('publicwww.com' in line for line in self._run(domain='web', search='publicwww')))
+        self.assertFalse(any('---' in line or '| URL |' in line for line in self._run(domain='web')))
+
+    def test_owner_site_list_is_complete(self):
+        text = ''.join(f.read_text() for f in (ROOT / 'references/websites').glob('*.md'))
+        for host in ('exploit-db.com', 'shodan.io', 'zoomeye.hk', 'fofa.info', 'onyphe.io', 'publicwww.com',
+                     'packetstormsecurity.com', 'null-byte.wonderhowto.com', 'cve.mitre.org', 'cvedetails.com',
+                     'nvd.nist.gov', 'kb.cert.org', 'virustotal.com', 'virusscan.jotti.org', 'kali.org/tools',
+                     'blackarch.org', 'pentest-tools.com', 'romhacking.net', 'yougetsignal.com', 'dnswatch.info',
+                     'search.dnslytics.com', 'coffer.com', 'bgp.he.net', 'securitytrails.com', 'ip-api.com',
+                     'whatismyip.com', 'ip2location.com', 'ipaddress.com', 'cmd5.org', 'crackstation.net',
+                     'hash.online-convert.com', 'cryptext.eu', 'crypt.uticraft.com', 'ipleak.net'):
+            self.assertIn(host, text)
+
+    def test_documented_commands_exist(self):
+        docs = [ROOT / 'SKILL.md', *(ROOT / 'docs').glob('*.md'), *(ROOT / 'references').rglob('*.md')]
+        cited = set()
+        for doc in docs:
+            cited |= set(re.findall(r'quebrador\.py ([a-z][a-z-]*)', doc.read_text()))
+        self.assertIn('catalog', cited)
+        for cmd in cited:
+            self.assertTrue(callable(getattr(quebrador, cmd.replace('-', '_'), None)), cmd)
+        table = re.findall(r'\| `catalog ([a-z]+)` \|', (ROOT / 'SKILL.md').read_text())
+        self.assertEqual(sorted(table), sorted(['repos', 'mcp', 'skills', 'web', 'yt', 'creative', 'external']))
+
+
+class HistoryTest(unittest.TestCase):
+    def test_chain_detects_tampering(self):
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(quebrador, 'STATE', Path(tmp)):
+            quebrador.append_history('intake', {'url': 'https://a.example'})
+            quebrador.append_history('tts', {'file': 'x.wav'})
+            path = Path(tmp) / 'history.json'
+            history = json.loads(path.read_text())
+            self.assertIsNone(quebrador.verify_history(history))
+            history[0]['detail']['url'] = 'https://b.example'
+            self.assertEqual(quebrador.verify_history(history), 0)
+            path.write_text(json.dumps(history))
+            with mock.patch('builtins.print'), self.assertRaises(RuntimeError):
+                quebrador.record(argparse.Namespace(verify=True))
 
 
 if __name__ == '__main__':

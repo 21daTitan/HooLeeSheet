@@ -45,7 +45,7 @@
 | tandasat/SimpleVisor | https://github.com/tandasat/SimpleVisor | C | research_only |
 | ionescu007/VisualUefi | https://github.com/ionescu007/VisualUefi | C | research_only |
 | Air14/SmmLoader | https://github.com/Air14/SmmLoader | C | research_only |
-| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | research_only |
+| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | research_only — não encontrado ou inacessível em 2026-11-10 |
 | SinaKarvandi/Hypervisor-From-Scratch | https://github.com/SinaKarvandi/Hypervisor-From-Scratch | C | research_only |
 | deepinstinct/BlockEtw | https://github.com/deepinstinct/BlockEtw | C++ | research_only |
 
@@ -285,7 +285,7 @@
 | firmadyne/firmadyne | https://github.com/firmadyne/firmadyne | Python/Shell | read_only |
 | fkie-cad/FACT_core | https://github.com/fkie-cad/FACT_core | Python | read_only |
 | e-m-b-a/emba | https://github.com/e-m-b-a/emba | Shell | read_only |
-| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | read_only |
+| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | read_only — não encontrado ou inacessível em 2026-11-10 |
 
 ## SAST — Análise Estática e Supply Chain (11)
 
@@ -373,7 +373,7 @@
 |---|---|---|---|
 | Microsoft/Windows-Driver-Samples | https://github.com/Microsoft/Windows-Driver-Samples | C/C++ | manual_review |
 | microsoft/Windows-Driver-Frameworks | https://github.com/microsoft/Windows-Driver-Frameworks | C++ | manual_review |
-| tandasat/MiniVisor | https://github.com/tandasat/MiniVisor | C | manual_review |
+| tandasat/MiniVisor | https://github.com/tandasat/MiniVisor | C | manual_review — não encontrado ou inacessível em 2026-11-10 |
 | ionescu007/SimpleVisor | https://github.com/ionescu007/SimpleVisor | C | manual_review |
 | theopolis/uefi-firmware-parser | https://github.com/theopolis/uefi-firmware-parser | Python | manual_review |
 | hasherezade/hollows_hunter | https://github.com/hasherezade/hollows_hunter | C++ | manual_review |

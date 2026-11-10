@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Foco No Progresso — Quebrador CLI v1.2.0
+"""Foco No Progresso — Quebrador CLI v1.2.1
 
 Sem dependências externas obrigatórias. Backends opcionais para análise audiovisual.
 Nenhum código de terceiros é executado, instalado ou clonado sem autorização.
@@ -168,6 +168,7 @@ def intake(args):
         return
     items.append(entry)
     save_json(path, items)
+    append_history('intake', {'id': entry['id'], 'url': entry['url'], 'lane': entry['lane']})
     print(json.dumps(entry, ensure_ascii=False, indent=2))
 
 
@@ -332,6 +333,7 @@ def clone_approved(args):
     log = load_json(STATE / 'clone-report.json', [])
     log.append(report)
     save_json(STATE / 'clone-report.json', log)
+    append_history('clone-approved', {'repo': args.repo, 'status': status})
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 
@@ -487,6 +489,8 @@ def sfx(args):
             item['download'] = f'falhou: {type(exc).__name__}'
     save_json(dest / 'results.json', {'query': args.query, 'source': 'freesound.org',
                                       'observed_at': stamp(), 'results': results})
+    if args.download:
+        append_history('sfx-download', {'query': args.query, 'files': [i.get('download') for i in results[:args.download]]})
     for item in results:
         print(f"[{item['id']}] {item['name']} — {item['duration']}s — autor: {item['author']}")
         print(f"    licença: {item['license']}")
@@ -548,6 +552,7 @@ def tts(args):
         'text': args.text, 'server': args.server, 'format': args.format, 'file': str(out), 'sha256': ident,
         'reference_id': args.reference_id, 'voice_reference_used': audio is not None,
         'consent_declared': bool(args.consent), 'date_utc': stamp()})
+    append_history('tts', {'file': str(out), 'sha256': ident, 'voice_reference_used': audio is not None})
     print(f'Áudio salvo: {out} ({len(data)} bytes)')
 
 
@@ -613,6 +618,34 @@ def refs_add(args):
     intake(args)
 
 
+def _chain(prev: str, entry: dict) -> str:
+    core = {k: entry[k] for k in ('timestamp', 'action', 'detail')}
+    return sha256((prev + json.dumps(core, sort_keys=True, ensure_ascii=False)).encode('utf-8')).hexdigest()
+
+
+def append_history(action: str, detail: dict) -> dict:
+    path = STATE / 'history.json'
+    history = load_json(path, [])
+    entry = {'timestamp': stamp(), 'action': action, 'detail': detail}
+    entry['chain_hash'] = _chain(history[-1]['chain_hash'] if history else '', entry)
+    history.append(entry)
+    save_json(path, history)
+    return entry
+
+
+def verify_history(history: list) -> int | None:
+    """Índice do primeiro registro adulterado, ou None se a cadeia confere."""
+    prev = ''
+    for i, entry in enumerate(history):
+        try:
+            if entry['chain_hash'] != _chain(prev, entry):
+                return i
+        except (KeyError, TypeError):
+            return i
+        prev = entry['chain_hash']
+    return None
+
+
 def record(args):
     """Exibe histórico com hash encadeado."""
     history = load_json(STATE / 'history.json', [])
@@ -620,7 +653,54 @@ def record(args):
         print('Nenhum registro no histórico.')
         return
     for entry in history[-20:]:
-        print(f"[{entry.get('timestamp', '?')}] {entry.get('action', '?')} — hash: {entry.get('chain_hash', '?')[:16]}")
+        print(f"[{entry.get('timestamp', '?')}] {entry.get('action', '?')} — hash: {str(entry.get('chain_hash', '?'))[:16]}")
+    if args.verify:
+        bad = verify_history(history)
+        if bad is not None:
+            raise RuntimeError(f'Histórico adulterado a partir do registro {bad + 1} de {len(history)}')
+        print(f'Cadeia íntegra: {len(history)} registro(s)')
+
+
+MD_DOMAINS = {'web': 'websites', 'creative': 'creative', 'external': 'external'}
+
+
+def _md_rows(folder: str) -> list[tuple[str, list[str]]]:
+    rows = []
+    for file in sorted((ROOT / 'references' / folder).glob('*.md')):
+        lines = file.read_text(encoding='utf-8').splitlines()
+        for i, line in enumerate(lines):
+            if not line.startswith('|') or set(line) <= set('|-: '):
+                continue
+            if i + 1 < len(lines) and lines[i + 1].startswith('|') and set(lines[i + 1]) <= set('|-: '):
+                continue
+            rows.append((file.stem, [c.strip() for c in line.strip('|').split('|')]))
+    return rows
+
+
+def catalog(args):
+    """Consulta os catálogos locais; somente leitura, sem rede."""
+    category = (args.category or '').casefold()
+    if args.domain == 'repos':
+        items = [(' '.join(e['categories']), f"{e['repo']} [{', '.join(e['categories'])}] {e['scope']} — {e['url']}")
+                 for e in load_json(CATALOG, {'entries': []})['entries']
+                 if not category or category in (c.casefold() for c in e['categories'])]
+    elif args.domain in ('mcp', 'skills'):
+        name = 'mcps_requested.txt' if args.domain == 'mcp' else 'skills_requested.txt'
+        items = [('', l.strip() + ' (inventário, não instalado)')
+                 for l in (ROOT / 'references' / name).read_text(encoding='utf-8').splitlines() if l.strip()]
+    elif args.domain == 'yt':
+        items = [(e.get('setor', ''), f"[{e.get('setor')}] {e.get('titulo_fornecido')} — {e.get('url')} ({e.get('status')})")
+                 for e in load_json(ROOT / 'references/youtube/fontes-aprendizado.json', {'entries': []})['entries']]
+        items = [i for i in items if not category or category == i[0].casefold()]
+    else:
+        items = [(stem, f"[{stem}] " + ' | '.join(cells)) for stem, cells in _md_rows(MD_DOMAINS[args.domain])
+                 if not category or category in stem.casefold()]
+    term = (args.search or '').casefold()
+    lines = [text for _, text in items if term in text.casefold()]
+    for text in lines:
+        print(text)
+    print(f'{len(lines)} resultado(s) em {args.domain}; itens não verificados')
+    return lines
 
 
 def main():
@@ -631,7 +711,13 @@ def main():
     sub.add_parser('inventory', help='Inventário completo dos catálogos')
     sub.add_parser('report', help='Gera relatório de status da pesquisa')
     sub.add_parser('refs', help='Lista referências do intake')
-    sub.add_parser('record', help='Exibe histórico encadeado')
+    p = sub.add_parser('record', help='Exibe histórico encadeado')
+    p.add_argument('--verify', action='store_true', help='Recalcula a cadeia e acusa adulteração')
+
+    p = sub.add_parser('catalog', help='Consulta os catálogos locais')
+    p.add_argument('domain', choices=['repos', 'mcp', 'skills', 'web', 'creative', 'external', 'yt'])
+    p.add_argument('--category', help='Categoria (repos), arquivo (web/creative/external) ou setor (yt)')
+    p.add_argument('--search', help='Termo a procurar')
 
     p = sub.add_parser('intake', help='Registra nova referência na fila')
     p.add_argument('url')

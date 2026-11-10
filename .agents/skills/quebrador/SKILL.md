@@ -1,6 +1,6 @@
 ---
 name: quebrador
-version: 1.2.0
+version: 1.2.1
 description: Skill universal Quebrador — Foco No Progresso. Coordenador de pesquisa rastreável, engenharia reversa de vídeos, estudo de repositórios, catálogos de segurança, ferramentas criativas e automação supervisionada.
 ---
 
@@ -34,14 +34,14 @@ Antes de qualquer ação, leia `MASTER_PROMPT_UNIVERSAL.txt`. Dados em `referenc
 
 | Domínio | Referência | Comando CLI | Pedidos típicos |
 |---|---|---|---|
-| Repositórios | `security/repos-catalog.md` | `repos` | "lista ferramentas de RE", "categorias de evasão" |
-| Servidores MCP | `security/mcp-servers.md` | `mcp` | "configura ghidra-mcp", "lista MCPs de rede" |
-| Skills | `security/skills-catalog.md` | `skills` | "ativa assembly-x64", "skills de kernel" |
+| Repositórios | `security/repos-catalog.md` | `catalog repos` | "lista ferramentas de RE", "categorias de evasão" |
+| Servidores MCP | `security/mcp-servers.md` | `catalog mcp` | "configura ghidra-mcp", "lista MCPs de rede" |
+| Skills | `security/skills-catalog.md` | `catalog skills` | "ativa assembly-x64", "skills de kernel" |
 | Superfície | `security/attack-surface-map.md` | — | "como atacar/defender AD", "cenário K8S" |
-| Sites | `websites/*.md` | `web` | "bancos de exploits", "ferramentas de rede" |
-| YouTube | `youtube/fontes-aprendizado.json` | `yt` | "estuda esse vídeo", "engenharia reversa" |
-| Criativo | `creative/*.md` | `creative` | "IAs pra logo", "ferramentas de vídeo", "voz local", "busca SFX" |
-| Externos | `external/*.md` | `external` | "projetos Three.js", "recursos de estudo" |
+| Sites | `websites/*.md` | `catalog web` | "bancos de exploits", "ferramentas de rede" |
+| YouTube | `youtube/fontes-aprendizado.json` | `catalog yt` | "estuda esse vídeo", "engenharia reversa" |
+| Criativo | `creative/*.md` | `catalog creative` | "IAs pra logo", "ferramentas de vídeo", "voz local", "busca SFX" |
+| Externos | `external/*.md` | `catalog external` | "projetos Three.js", "recursos de estudo" |
 
 ## CLI
 
@@ -56,7 +56,9 @@ python3 scripts/quebrador.py clone-approved REPO --approve  # clone de fonte ver
 python3 scripts/quebrador.py validate         # valida consistência dos catálogos
 python3 scripts/quebrador.py report           # gera relatório de status
 python3 scripts/quebrador.py refs             # lista referências do intake
-python3 scripts/quebrador.py record           # histórico encadeado
+python3 scripts/quebrador.py record --verify  # histórico encadeado e checagem de adulteração
+python3 scripts/quebrador.py catalog web --search exploit    # consulta catálogos (repos|mcp|skills|web|creative|external|yt)
+python3 scripts/quebrador.py catalog repos --category C2
 python3 scripts/quebrador.py sfx "TERMO"       # efeitos sonoros no Freesound (FREESOUND_API_KEY)
 python3 scripts/quebrador.py tts "TEXTO" --out ARQ  # voz por servidor Fish Speech local
 ```

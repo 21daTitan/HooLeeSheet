@@ -1,11 +1,19 @@
-# Bancos de Vulnerabilidades e Análise de Malware
+# Bancos de Vulnerabilidades e Verificação de Vírus
 
-> **Aviso**: referências educacionais para pesquisa defensiva. URLs não validados automaticamente.
+> **Aviso**: referências educacionais para pesquisa defensiva autorizada (CTF, bug bounty, laboratório próprio). URLs fornecidos pelo dono; não validados automaticamente.
+
+## Banco de dados de vulnerabilidades
 
 | Site | URL | Descrição |
 |---|---|---|
-| NVD (NIST) | https://nvd.nist.gov/ | National Vulnerability Database; base oficial do governo dos EUA com scoring CVSS e referências de patches |
-| CVE Details | https://www.cvedetails.com/ | Interface de busca e estatísticas sobre CVEs; filtragem por produto, fornecedor e ano |
-| CERT/CC | https://www.kb.cert.org/vuls/ | Vulnerability Notes Database do CERT Coordination Center; advisories coordenados com fornecedores |
-| VirusTotal | https://www.virustotal.com/ | Análise de arquivos, URLs e hashes com 70+ motores antivírus; API para automação de triagem |
-| CVE Mitre | https://cve.mitre.org/ | Autoridade de numeração CVE; catálogo oficial de identificadores de vulnerabilidades |
+| CVE (MITRE) | https://cve.mitre.org/cve/ | Lista oficial de identificadores CVE |
+| CVE Details | https://www.cvedetails.com/ | Consulta de CVEs por produto, fornecedor e gravidade |
+| NVD | https://nvd.nist.gov/ | Base nacional de vulnerabilidades do NIST |
+| CERT/CC | https://www.kb.cert.org/vuls/ | Notas de vulnerabilidade do CERT/CC |
+
+## Verificação de vírus
+
+| Site | URL | Descrição |
+|---|---|---|
+| VirusTotal | https://www.virustotal.com/nl/ | Análise de arquivos e URLs por vários antivírus |
+| Jotti | https://virusscan.jotti.org/ | Análise de arquivos por vários antivírus |

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.1 — 2026-11-10
+- Subcomando `catalog` para consultar repos, MCPs, skills, sites, criativo, externos e YouTube (o SKILL.md citava comandos que não existiam)
+- Histórico encadeado passa a ser gravado (`intake`, `clone-approved`, `sfx --download`, `tts`); `record --verify` acusa adulteração
+- Catálogos de sites completados com a lista original do dono; novo `websites/download-ferramentas.md`
+- `external/projetos-github.md` usa os rótulos do dono em vez de descrições não conferidas
+- Workflows movidos para `.github/workflows/` na raiz do repositório
+- Dois repositórios marcados como não encontrados no catálogo
+
 ## 1.2.0 — 2026-11-10
 - Subcomando `sfx`: busca efeitos sonoros no Freesound, com licença e autor por resultado
 - Subcomando `tts`: voz por servidor Fish Speech local; recusa servidor público e exige `--consent` para amostra de voz

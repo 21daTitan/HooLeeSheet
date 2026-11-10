@@ -12,6 +12,8 @@
 | Canva | https://www.canva.com/ | Design geral: posts, apresentações, vídeos, logos | Sim (amplo) |
 | Adobe Express | https://www.adobe.com/express/ | Design rápido, remoção de fundo, templates profissionais | Sim (limitado) |
 | Figma | https://www.figma.com/ | UI/UX design colaborativo, prototipagem e design systems | Sim (3 projetos) |
+| Adobe After Effects | https://www.adobe.com/products/aftereffects.html | Animação de logos e motion graphics | Não (teste gratuito) |
+| Adobe Photoshop | https://www.adobe.com/products/photoshop.html | Edição de imagem e efeitos | Não (teste gratuito) |
 
 ## Vídeo e Animação com IA
 
