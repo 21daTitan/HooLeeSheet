@@ -40,6 +40,7 @@ python3 scripts/quebrador.py tts "Olá" --out narracao.wav \
 
 - O comando recusa qualquer servidor que não seja `localhost` ou rede privada, então não gasta crédito do serviço pago.
 - Contrato usado (conferido em `fish_speech/utils/schema.py`, `ServeTTSRequest`): `text`, `format`, `reference_id` e `references: [{audio em base64, text}]`.
+- O cliente foi testado de ponta a ponta contra um servidor local que imita esse contrato (envio, gravação do arquivo e histórico).
 - **[PENDENTE]** A rota `/v1/tts` vem da documentação do Fish e ainda não foi exercitada contra um servidor real; conferir no primeiro uso.
 
 - **Nenhuma chamada sai para fish.audio** → nenhum crédito consumido.

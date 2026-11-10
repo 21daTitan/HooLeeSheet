@@ -16,38 +16,38 @@
 ## Limites do método
 - A busca não segue redirecionamento: repositório renomeado ou transferido aparece como não encontrado.
 - A busca recusa organizações que restringem acesso de aplicativos; três itens da ConsenSys ficaram inconclusivos.
-- Para os candidatos abaixo, só a existência do nome novo foi conferida. **[HIPÓTESE]** A equivalência com o original não foi confirmada, e o catálogo não foi alterado.
+- Para os candidatos abaixo, a existência do nome novo foi conferida. **[INFERIDO]** A equivalência se apoia em descrição, dono e popularidade (base de cada um em `references/aliases.json`), não em redirecionamento oficial. O catálogo guarda o nome original do dono e, ao lado, o nome atual provável.
 
 ## Não encontrados
 
 | Repositório do catálogo | Candidato que existe | Observação |
 |---|---|---|
-| BloodHoundAD/SharpHound | SpecterOps/SharpHound | candidato existe; equivalência não confirmada |
-| ConsenSys/mythril | ConsenSysDiligence/mythril | candidato existe; equivalência não confirmada |
+| BloodHoundAD/SharpHound | SpecterOps/SharpHound | nome atual provável; ver aliases.json |
+| ConsenSys/mythril | ConsenSysDiligence/mythril | nome atual provável; ver aliases.json |
 | ConsenSys/scribble | — | inconclusivo: a busca recusa esta organização |
 | ConsenSys/surya | — | inconclusivo: a busca recusa esta organização |
 | ConsenSys/teku | — | inconclusivo: a busca recusa esta organização |
-| IPST/uefi-firmware-parser | theopolis/uefi-firmware-parser | candidato existe; equivalência não confirmada |
-| LordNoteworthy/al-khaser | ayoubfaouzi/al-khaser | candidato existe; equivalência não confirmada |
-| NVIDIA/NeMo-Guardrails | NVIDIA-NeMo/Guardrails | candidato existe; equivalência não confirmada |
-| SecureAuthCorp/impacket | fortra/impacket | candidato existe; equivalência não confirmada |
-| WithSecureLabs/drozer | ReversecLabs/drozer | candidato existe; equivalência não confirmada |
+| IPST/uefi-firmware-parser | theopolis/uefi-firmware-parser | nome atual provável; ver aliases.json |
+| LordNoteworthy/al-khaser | ayoubfaouzi/al-khaser | nome atual provável; ver aliases.json |
+| NVIDIA/NeMo-Guardrails | NVIDIA-NeMo/Guardrails | nome atual provável; ver aliases.json |
+| SecureAuthCorp/impacket | fortra/impacket | nome atual provável; ver aliases.json |
+| WithSecureLabs/drozer | ReversecLabs/drozer | nome atual provável; ver aliases.json |
 | Zero-Memory/EDR-Blocker | — | sem candidato |
 | bensadeh/zenith | — | sem candidato |
-| cloudsploit/scans | aquasecurity/cloudsploit | candidato existe; equivalência não confirmada |
+| cloudsploit/scans | aquasecurity/cloudsploit | nome atual provável; ver aliases.json |
 | deepinstinct/BlockEtw | — | sem candidato |
-| elder-plinius/L1B3RT45 | elder-plinius/L1B3RT4S | candidato existe; equivalência não confirmada |
-| fox-it/BloodHound.py | dirkjanm/BloodHound.py | candidato existe; equivalência não confirmada |
-| fox-it/mitm6 | dirkjanm/mitm6 | candidato existe; equivalência não confirmada |
+| elder-plinius/L1B3RT45 | elder-plinius/L1B3RT4S | nome atual provável; ver aliases.json |
+| fox-it/BloodHound.py | dirkjanm/BloodHound.py | nome atual provável; ver aliases.json |
+| fox-it/mitm6 | dirkjanm/mitm6 | nome atual provável; ver aliases.json |
 | google/project-zero | — | sem candidato |
 | j00ru/windows-syscall-processing | — | sem candidato |
-| leondz/garak | NVIDIA/garak | candidato existe; equivalência não confirmada |
+| leondz/garak | NVIDIA/garak | nome atual provável; ver aliases.json |
 | mazzeoia/mazyos-scraper | — | sem candidato |
 | nicolo-ribaudo/sourcemap-decoder | — | sem candidato |
-| prysmaticlabs/prysm | OffchainLabs/prysm | candidato existe; equivalência não confirmada |
-| returntocorp/semgrep | semgrep/semgrep | candidato existe; equivalência não confirmada |
-| snyk/snyk | snyk/cli | candidato existe; equivalência não confirmada |
-| tandasat/MiniVisor | tandasat/MiniVisorPkg | candidato existe; equivalência não confirmada |
+| prysmaticlabs/prysm | OffchainLabs/prysm | nome atual provável; ver aliases.json |
+| returntocorp/semgrep | semgrep/semgrep | nome atual provável; ver aliases.json |
+| snyk/snyk | snyk/cli | nome atual provável; ver aliases.json |
+| tandasat/MiniVisor | tandasat/MiniVisorPkg | nome atual provável; ver aliases.json |
 | waylan/beautifulsoup | — | sem candidato |
 
 ## Arquivados

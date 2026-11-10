@@ -5,7 +5,7 @@
     "A busca não segue redirecionamento: repositório renomeado ou transferido aparece como não encontrado",
     "Organizações que restringem acesso de aplicativos podem aparecer como não encontradas",
     "Existir não é ser seguro, mantido ou livre para uso; nada foi clonado nem executado",
-    "Candidatos de nome novo: só a existência do candidato foi conferida, não a equivalência com o original"
+    "Candidatos de nome novo: existência conferida; equivalência inferida por descrição, dono e popularidade, não por redirecionamento oficial"
   ],
   "totals": {
     "catalog": 288,
@@ -19,12 +19,12 @@
     {
       "repo": "BloodHoundAD/SharpHound",
       "candidate": "SpecterOps/SharpHound",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "ConsenSys/mythril",
       "candidate": "ConsenSysDiligence/mythril",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "ConsenSys/scribble",
@@ -44,27 +44,27 @@
     {
       "repo": "IPST/uefi-firmware-parser",
       "candidate": "theopolis/uefi-firmware-parser",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "LordNoteworthy/al-khaser",
       "candidate": "ayoubfaouzi/al-khaser",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "NVIDIA/NeMo-Guardrails",
       "candidate": "NVIDIA-NeMo/Guardrails",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "SecureAuthCorp/impacket",
       "candidate": "fortra/impacket",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "WithSecureLabs/drozer",
       "candidate": "ReversecLabs/drozer",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "Zero-Memory/EDR-Blocker",
@@ -79,7 +79,7 @@
     {
       "repo": "cloudsploit/scans",
       "candidate": "aquasecurity/cloudsploit",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "deepinstinct/BlockEtw",
@@ -89,17 +89,17 @@
     {
       "repo": "elder-plinius/L1B3RT45",
       "candidate": "elder-plinius/L1B3RT4S",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "fox-it/BloodHound.py",
       "candidate": "dirkjanm/BloodHound.py",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "fox-it/mitm6",
       "candidate": "dirkjanm/mitm6",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "google/project-zero",
@@ -114,7 +114,7 @@
     {
       "repo": "leondz/garak",
       "candidate": "NVIDIA/garak",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "mazzeoia/mazyos-scraper",
@@ -129,22 +129,22 @@
     {
       "repo": "prysmaticlabs/prysm",
       "candidate": "OffchainLabs/prysm",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "returntocorp/semgrep",
       "candidate": "semgrep/semgrep",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "snyk/snyk",
       "candidate": "snyk/cli",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "tandasat/MiniVisor",
       "candidate": "tandasat/MiniVisorPkg",
-      "note": "candidato existe; equivalência não confirmada"
+      "note": "nome atual provável; base em references/aliases.json"
     },
     {
       "repo": "waylan/beautifulsoup",

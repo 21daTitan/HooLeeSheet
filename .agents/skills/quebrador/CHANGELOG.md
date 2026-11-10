@@ -5,6 +5,9 @@
 - Oito estudos de vídeo em `references/youtube/estudos/`, feitos só por legendas (vidIQ, 40 créditos), pendentes de revisão do dono
 - Cada estudo separa técnicas transferíveis do que conflita com a política (voz de terceiros, evasão de plataforma, anúncio camuflado, história falsa)
 - Playlist e canal seguem não revisados: YouTube bloqueado na rede do ambiente
+- `references/aliases.json`: nome atual provável de 16 repositórios não encontrados; o catálogo mantém o nome original e mostra o atual ao lado
+- Estudo do canal de referência só por metadados (`estudos/canal-blackghost.study.md`)
+- Teste de ponta a ponta do `tts` contra servidor local que imita o contrato do Fish Speech
 - Verificação dos 288 repositórios publicada em `references/security/verificacao-repos.md` e `.json`: 261 encontrados, 27 não encontrados, 18 arquivados; catálogo marcado, lista de clonagem inalterada
 
 ## 1.2.1 — 2026-11-10

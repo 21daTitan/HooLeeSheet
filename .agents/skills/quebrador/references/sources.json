@@ -6,7 +6,7 @@
     "mcp_servers": {"catalog": "security/mcp-servers.md", "count": 30, "scope": "inventário, não instalados"},
     "skills": {"catalog": "security/skills-catalog.md", "count": 32, "scope": "inventário, não instalados"},
     "websites": {"catalog": "websites/", "count": 6, "scope": "bancos de exploits, vulnerabilidades e vírus, rede e IP, hash, anonimato, diretórios de ferramentas"},
-    "youtube": {"catalog": "youtube/fontes-aprendizado.json", "count": 10, "scope": "8 vídeos estudados só por legendas em youtube/estudos/; playlist e canal não revisados"},
+    "youtube": {"catalog": "youtube/fontes-aprendizado.json", "count": 10, "scope": "8 vídeos estudados só por legendas e o canal só por metadados, em youtube/estudos/; playlist não revisada"},
     "creative": {"catalog": "creative/", "count": 3, "scope": "ferramentas de design, inspiração e áudio/efeitos sonoros"},
     "external": {"catalog": "external/", "count": 2, "scope": "projetos GitHub e recursos de aprendizado"}
   },

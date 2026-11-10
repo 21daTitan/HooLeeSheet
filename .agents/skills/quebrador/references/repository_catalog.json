@@ -315,7 +315,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "theopolis/uefi-firmware-parser",
+      "current_url": "https://github.com/theopolis/uefi-firmware-parser",
+      "current_basis": "provável dono errado; o candidato já está no catálogo"
     },
     {
       "repo": "SinaKarvandi/Hypervisor-From-Scratch",
@@ -858,7 +861,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "elder-plinius/L1B3RT4S",
+      "current_url": "https://github.com/elder-plinius/L1B3RT4S",
+      "current_basis": "mesmo dono; provável erro de digitação (5 no lugar de S)"
     },
     {
       "repo": "elder-plinius/OBLITERATUS",
@@ -898,7 +904,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "NVIDIA-NeMo/Guardrails",
+      "current_url": "https://github.com/NVIDIA-NeMo/Guardrails",
+      "current_basis": "original, 7,4 mil estrelas; descrição: NeMo Guardrails"
     },
     {
       "repo": "leondz/garak",
@@ -908,7 +917,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "NVIDIA/garak",
+      "current_url": "https://github.com/NVIDIA/garak",
+      "current_basis": "original, 9,9 mil estrelas; descrição: scanner de vulnerabilidade de LLM"
     },
     {
       "repo": "promptfoo/promptfoo",
@@ -1168,7 +1180,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "manual_review"
+      "scope": "manual_review",
+      "current_repo": "dirkjanm/mitm6",
+      "current_url": "https://github.com/dirkjanm/mitm6",
+      "current_basis": "original; descrição: IPv4 via IPv6"
     },
     {
       "repo": "lgandx/Responder",
@@ -1378,7 +1393,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "fortra/impacket",
+      "current_url": "https://github.com/fortra/impacket",
+      "current_basis": "original, 16,2 mil estrelas; descrição: classes Python para protocolos de rede"
     },
     {
       "repo": "topotam/PetitPotam",
@@ -1458,7 +1476,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "SpecterOps/SharpHound",
+      "current_url": "https://github.com/SpecterOps/SharpHound",
+      "current_basis": "original; descrição: coletor C# do BloodHound"
     },
     {
       "repo": "fox-it/BloodHound.py",
@@ -1468,7 +1489,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "research_only"
+      "scope": "research_only",
+      "current_repo": "dirkjanm/BloodHound.py",
+      "current_url": "https://github.com/dirkjanm/BloodHound.py",
+      "current_basis": "original; descrição: coletor Python do BloodHound"
     },
     {
       "repo": "ShutdownRepo/PyWhisker",
@@ -1780,7 +1804,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "manual_review"
+      "scope": "manual_review",
+      "current_repo": "ReversecLabs/drozer",
+      "current_url": "https://github.com/ReversecLabs/drozer",
+      "current_basis": "original, 4,6 mil estrelas; descrição: avaliação de segurança Android"
     },
     {
       "repo": "rovo89/Xposed",
@@ -1970,7 +1997,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "read_only"
+      "scope": "read_only",
+      "current_repo": "semgrep/semgrep",
+      "current_url": "https://github.com/semgrep/semgrep",
+      "current_basis": "original, 17,5 mil estrelas; descrição: análise estática leve"
     },
     {
       "repo": "github/codeql",
@@ -2010,7 +2040,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "read_only"
+      "scope": "read_only",
+      "current_repo": "snyk/cli",
+      "current_url": "https://github.com/snyk/cli",
+      "current_basis": "original, 5,7 mil estrelas; descrição: Snyk CLI"
     },
     {
       "repo": "dependabot/dependabot-core",
@@ -2300,7 +2333,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "read_only"
+      "scope": "read_only",
+      "current_repo": "aquasecurity/cloudsploit",
+      "current_url": "https://github.com/aquasecurity/cloudsploit",
+      "current_basis": "original, 3,7 mil estrelas; descrição: postura de segurança em nuvem"
     },
     {
       "repo": "RhinoSecurityLabs/pacu",
@@ -2330,7 +2366,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "read_only"
+      "scope": "read_only",
+      "current_repo": "ConsenSysDiligence/mythril",
+      "current_url": "https://github.com/ConsenSysDiligence/mythril",
+      "current_basis": "original, 4,2 mil estrelas; descrição: análise simbólica de bytecode EVM"
     },
     {
       "repo": "crytic/echidna",
@@ -2470,7 +2509,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "read_only"
+      "scope": "read_only",
+      "current_repo": "OffchainLabs/prysm",
+      "current_url": "https://github.com/OffchainLabs/prysm",
+      "current_basis": "original, 3,7 mil estrelas; descrição: Ethereum proof of stake em Go"
     },
     {
       "repo": "status-im/nimbus-eth2",
@@ -2570,7 +2612,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "manual_review"
+      "scope": "manual_review",
+      "current_repo": "tandasat/MiniVisorPkg",
+      "current_url": "https://github.com/tandasat/MiniVisorPkg",
+      "current_basis": "mesmo dono; nome incompleto; o candidato já está no catálogo"
     },
     {
       "repo": "ionescu007/SimpleVisor",
@@ -2770,7 +2815,10 @@
       ],
       "review_status": "not_verified",
       "clone_permission": "none",
-      "scope": "manual_review"
+      "scope": "manual_review",
+      "current_repo": "ayoubfaouzi/al-khaser",
+      "current_url": "https://github.com/ayoubfaouzi/al-khaser",
+      "current_basis": "original, 7,1 mil estrelas; descrição: técnicas de detecção de sandbox e depurador"
     },
     {
       "repo": "yamadashy/repomix",

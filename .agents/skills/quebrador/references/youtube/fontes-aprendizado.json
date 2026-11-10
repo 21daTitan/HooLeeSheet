@@ -1,5 +1,5 @@
 {
-  "notice": "Referências fornecidas pelo dono. Oito vídeos estudados somente por legendas; playlist e canal não revisados. Nenhum estudo foi revisado pelo dono.",
+  "notice": "Referências fornecidas pelo dono. Oito vídeos estudados somente por legendas e o canal somente por metadados; a playlist não foi revisada. Nenhum estudo foi revisado pelo dono.",
   "version": "1.3.0",
   "entries": [
     {
@@ -101,8 +101,10 @@
       "titulo_fornecido": "Canal de referência",
       "setor": "creator",
       "tipo": "canal",
-      "status": "nao_revisado",
-      "motivo": "YouTube bloqueado na rede do ambiente; não foi possível listar os vídeos"
+      "status": "metadados_analisados",
+      "estudo": "estudos/canal-blackghost.study.md",
+      "evidencia": "somente metadados (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente"
     }
   ]
 }

@@ -784,7 +784,8 @@ def catalog(args):
     """Consulta os catálogos locais; somente leitura, sem rede."""
     category = (args.category or '').casefold()
     if args.domain == 'repos':
-        items = [(' '.join(e['categories']), f"{e['repo']} [{', '.join(e['categories'])}] {e['scope']} — {e['url']}")
+        items = [(' '.join(e['categories']), f"{e['repo']} [{', '.join(e['categories'])}] {e['scope']} — {e['url']}"
+                  + (f" → nome atual provável: {e['current_repo']}" if e.get('current_repo') else ''))
                  for e in load_json(CATALOG, {'entries': []})['entries']
                  if not category or category in (c.casefold() for c in e['categories'])]
     elif args.domain in ('mcp', 'skills'):

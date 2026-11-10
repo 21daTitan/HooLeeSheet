@@ -47,7 +47,7 @@
 | tandasat/SimpleVisor | https://github.com/tandasat/SimpleVisor | C | research_only |
 | ionescu007/VisualUefi | https://github.com/ionescu007/VisualUefi | C | research_only |
 | Air14/SmmLoader | https://github.com/Air14/SmmLoader | C | research_only |
-| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | research_only — não encontrado em 2026-11-10 (candidato: theopolis/uefi-firmware-parser) |
+| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | research_only — não encontrado em 2026-11-10 (nome atual provável: theopolis/uefi-firmware-parser) |
 | SinaKarvandi/Hypervisor-From-Scratch | https://github.com/SinaKarvandi/Hypervisor-From-Scratch | C | research_only |
 | deepinstinct/BlockEtw | https://github.com/deepinstinct/BlockEtw | C++ | research_only — não encontrado em 2026-11-10 |
 
@@ -131,12 +131,12 @@
 | OWASP/www-project-top-10-for-large-language-model-applications | https://github.com/OWASP/www-project-top-10-for-large-language-model-applications | Docs | research_only |
 | corca-ai/awesome-llm-security | https://github.com/corca-ai/awesome-llm-security | Docs | research_only |
 | verazuo/jailbreak_llms | https://github.com/verazuo/jailbreak_llms | Python | research_only |
-| elder-plinius/L1B3RT45 | https://github.com/elder-plinius/L1B3RT45 | Dados | research_only — não encontrado em 2026-11-10 (candidato: elder-plinius/L1B3RT4S) |
+| elder-plinius/L1B3RT45 | https://github.com/elder-plinius/L1B3RT45 | Dados | research_only — não encontrado em 2026-11-10 (nome atual provável: elder-plinius/L1B3RT4S) |
 | elder-plinius/OBLITERATUS | https://github.com/elder-plinius/OBLITERATUS | Dados | research_only |
 | protectai/llm-guard | https://github.com/protectai/llm-guard | Python | research_only — arquivado |
 | meta-llama/PurpleLlama | https://github.com/meta-llama/PurpleLlama | Python | research_only |
-| NVIDIA/NeMo-Guardrails | https://github.com/NVIDIA/NeMo-Guardrails | Python | research_only — não encontrado em 2026-11-10 (candidato: NVIDIA-NeMo/Guardrails) |
-| leondz/garak | https://github.com/leondz/garak | Python | research_only — não encontrado em 2026-11-10 (candidato: NVIDIA/garak) |
+| NVIDIA/NeMo-Guardrails | https://github.com/NVIDIA/NeMo-Guardrails | Python | research_only — não encontrado em 2026-11-10 (nome atual provável: NVIDIA-NeMo/Guardrails) |
+| leondz/garak | https://github.com/leondz/garak | Python | research_only — não encontrado em 2026-11-10 (nome atual provável: NVIDIA/garak) |
 | promptfoo/promptfoo | https://github.com/promptfoo/promptfoo | TypeScript | research_only |
 | confident-ai/deepeval | https://github.com/confident-ai/deepeval | Python | research_only |
 | langchain-ai/langchain | https://github.com/langchain-ai/langchain | Python | research_only |
@@ -167,7 +167,7 @@
 | hashcat/hashcat | https://github.com/hashcat/hashcat | C | manual_review |
 | s0lst1c3/eaphammer | https://github.com/s0lst1c3/eaphammer | Python | manual_review |
 | OpenSecurityResearch/hostapd-wpe | https://github.com/OpenSecurityResearch/hostapd-wpe | C | manual_review |
-| fox-it/mitm6 | https://github.com/fox-it/mitm6 | Python | manual_review — não encontrado em 2026-11-10 (candidato: dirkjanm/mitm6) |
+| fox-it/mitm6 | https://github.com/fox-it/mitm6 | Python | manual_review — não encontrado em 2026-11-10 (nome atual provável: dirkjanm/mitm6) |
 | lgandx/Responder | https://github.com/lgandx/Responder | Python | manual_review |
 | mitmproxy/mitmproxy | https://github.com/mitmproxy/mitmproxy | Python | manual_review |
 | zaproxy/zaproxy | https://github.com/zaproxy/zaproxy | Java | manual_review |
@@ -213,7 +213,7 @@
 
 | Repositório | URL | Linguagem | Escopo |
 |---|---|---|---|
-| SecureAuthCorp/impacket | https://github.com/SecureAuthCorp/impacket | Python | research_only — não encontrado em 2026-11-10 (candidato: fortra/impacket) |
+| SecureAuthCorp/impacket | https://github.com/SecureAuthCorp/impacket | Python | research_only — não encontrado em 2026-11-10 (nome atual provável: fortra/impacket) |
 | topotam/PetitPotam | https://github.com/topotam/PetitPotam | Python | research_only |
 | p0dalirius/Coercer | https://github.com/p0dalirius/Coercer | Python | research_only |
 | Ridter/noPac | https://github.com/Ridter/noPac | Python | research_only |
@@ -221,8 +221,8 @@
 | ly4k/Certipy | https://github.com/ly4k/Certipy | Python | research_only |
 | dirkjanm/krbrelayx | https://github.com/dirkjanm/krbrelayx | Python | research_only |
 | SpecterOps/BloodHound | https://github.com/SpecterOps/BloodHound | TypeScript | research_only |
-| BloodHoundAD/SharpHound | https://github.com/BloodHoundAD/SharpHound | C# | research_only — não encontrado em 2026-11-10 (candidato: SpecterOps/SharpHound) |
-| fox-it/BloodHound.py | https://github.com/fox-it/BloodHound.py | Python | research_only — não encontrado em 2026-11-10 (candidato: dirkjanm/BloodHound.py) |
+| BloodHoundAD/SharpHound | https://github.com/BloodHoundAD/SharpHound | C# | research_only — não encontrado em 2026-11-10 (nome atual provável: SpecterOps/SharpHound) |
+| fox-it/BloodHound.py | https://github.com/fox-it/BloodHound.py | Python | research_only — não encontrado em 2026-11-10 (nome atual provável: dirkjanm/BloodHound.py) |
 | ShutdownRepo/PyWhisker | https://github.com/ShutdownRepo/PyWhisker | Python | research_only |
 
 ## C2 — Comando e Controle (18)
@@ -263,7 +263,7 @@
 | liaojack8/AndroidKiller | https://github.com/liaojack8/AndroidKiller | Dados | manual_review |
 | charles2gan/GDA-android-reversing-Tool | https://github.com/charles2gan/GDA-android-reversing-Tool | C++ | manual_review |
 | MobSF/Mobile-Security-Framework-MobSF | https://github.com/MobSF/Mobile-Security-Framework-MobSF | Python | manual_review |
-| WithSecureLabs/drozer | https://github.com/WithSecureLabs/drozer | Python | manual_review — não encontrado em 2026-11-10 (candidato: ReversecLabs/drozer) |
+| WithSecureLabs/drozer | https://github.com/WithSecureLabs/drozer | Python | manual_review — não encontrado em 2026-11-10 (nome atual provável: ReversecLabs/drozer) |
 | rovo89/Xposed | https://github.com/rovo89/Xposed | C++ | manual_review — arquivado |
 | ElderDrivers/EdXposed | https://github.com/ElderDrivers/EdXposed | Java | manual_review |
 | LSPosed/LSPosed | https://github.com/LSPosed/LSPosed | Java | manual_review |
@@ -287,17 +287,17 @@
 | firmadyne/firmadyne | https://github.com/firmadyne/firmadyne | Python/Shell | read_only |
 | fkie-cad/FACT_core | https://github.com/fkie-cad/FACT_core | Python | read_only |
 | e-m-b-a/emba | https://github.com/e-m-b-a/emba | Shell | read_only |
-| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | read_only — não encontrado em 2026-11-10 (candidato: theopolis/uefi-firmware-parser) |
+| IPST/uefi-firmware-parser | https://github.com/IPST/uefi-firmware-parser | Python | read_only — não encontrado em 2026-11-10 (nome atual provável: theopolis/uefi-firmware-parser) |
 
 ## SAST — Análise Estática e Supply Chain (11)
 
 | Repositório | URL | Linguagem | Escopo |
 |---|---|---|---|
-| returntocorp/semgrep | https://github.com/returntocorp/semgrep | OCaml/Python | read_only — não encontrado em 2026-11-10 (candidato: semgrep/semgrep) |
+| returntocorp/semgrep | https://github.com/returntocorp/semgrep | OCaml/Python | read_only — não encontrado em 2026-11-10 (nome atual provável: semgrep/semgrep) |
 | github/codeql | https://github.com/github/codeql | CodeQL | read_only |
 | joernio/joern | https://github.com/joernio/joern | Scala | read_only |
 | SonarSource/sonarqube | https://github.com/SonarSource/sonarqube | Java | read_only |
-| snyk/snyk | https://github.com/snyk/snyk | TypeScript | read_only — não encontrado em 2026-11-10 (candidato: snyk/cli) |
+| snyk/snyk | https://github.com/snyk/snyk | TypeScript | read_only — não encontrado em 2026-11-10 (nome atual provável: snyk/cli) |
 | dependabot/dependabot-core | https://github.com/dependabot/dependabot-core | Ruby | read_only |
 | renovatebot/renovate | https://github.com/renovatebot/renovate | TypeScript | read_only |
 | ossf/scorecard | https://github.com/ossf/scorecard | Go | read_only |
@@ -336,7 +336,7 @@
 | Repositório | URL | Linguagem | Escopo |
 |---|---|---|---|
 | nccgroup/ScoutSuite | https://github.com/nccgroup/ScoutSuite | Python | read_only |
-| cloudsploit/scans | https://github.com/cloudsploit/scans | JavaScript | read_only — não encontrado em 2026-11-10 (candidato: aquasecurity/cloudsploit) |
+| cloudsploit/scans | https://github.com/cloudsploit/scans | JavaScript | read_only — não encontrado em 2026-11-10 (nome atual provável: aquasecurity/cloudsploit) |
 | RhinoSecurityLabs/pacu | https://github.com/RhinoSecurityLabs/pacu | Python | read_only |
 
 ## SMARTCONTRACT — Contratos Inteligentes e Blockchain (25)
@@ -344,7 +344,7 @@
 | Repositório | URL | Linguagem | Escopo |
 |---|---|---|---|
 | crytic/slither | https://github.com/crytic/slither | Python | read_only |
-| ConsenSys/mythril | https://github.com/ConsenSys/mythril | Python | read_only — não encontrado em 2026-11-10 (candidato: ConsenSysDiligence/mythril) |
+| ConsenSys/mythril | https://github.com/ConsenSys/mythril | Python | read_only — não encontrado em 2026-11-10 (nome atual provável: ConsenSysDiligence/mythril) |
 | crytic/echidna | https://github.com/crytic/echidna | Haskell | read_only |
 | foundry-rs/foundry | https://github.com/foundry-rs/foundry | Rust | read_only |
 | NomicFoundation/hardhat | https://github.com/NomicFoundation/hardhat | TypeScript | read_only |
@@ -358,7 +358,7 @@
 | flashbots/mev-boost | https://github.com/flashbots/mev-boost | Go | read_only |
 | sigp/lighthouse | https://github.com/sigp/lighthouse | Rust | read_only |
 | ConsenSys/teku | https://github.com/ConsenSys/teku | Java | read_only — não encontrado em 2026-11-10 |
-| prysmaticlabs/prysm | https://github.com/prysmaticlabs/prysm | Go | read_only — não encontrado em 2026-11-10 (candidato: OffchainLabs/prysm) |
+| prysmaticlabs/prysm | https://github.com/prysmaticlabs/prysm | Go | read_only — não encontrado em 2026-11-10 (nome atual provável: OffchainLabs/prysm) |
 | status-im/nimbus-eth2 | https://github.com/status-im/nimbus-eth2 | Nim | read_only |
 | ChainSafe/lodestar | https://github.com/ChainSafe/lodestar | TypeScript | read_only |
 | sigstore/sigstore | https://github.com/sigstore/sigstore | Go | read_only |
@@ -375,7 +375,7 @@
 |---|---|---|---|
 | Microsoft/Windows-Driver-Samples | https://github.com/Microsoft/Windows-Driver-Samples | C/C++ | manual_review |
 | microsoft/Windows-Driver-Frameworks | https://github.com/microsoft/Windows-Driver-Frameworks | C++ | manual_review |
-| tandasat/MiniVisor | https://github.com/tandasat/MiniVisor | C | manual_review — não encontrado em 2026-11-10 (candidato: tandasat/MiniVisorPkg) |
+| tandasat/MiniVisor | https://github.com/tandasat/MiniVisor | C | manual_review — não encontrado em 2026-11-10 (nome atual provável: tandasat/MiniVisorPkg) |
 | ionescu007/SimpleVisor | https://github.com/ionescu007/SimpleVisor | C | manual_review |
 | theopolis/uefi-firmware-parser | https://github.com/theopolis/uefi-firmware-parser | Python | manual_review |
 | hasherezade/hollows_hunter | https://github.com/hasherezade/hollows_hunter | C++ | manual_review |
@@ -407,7 +407,7 @@
 | x64dbg/x64dbg | https://github.com/x64dbg/x64dbg | C++ | manual_review |
 | x64dbg/ScyllaHide | https://github.com/x64dbg/ScyllaHide | C++ | manual_review |
 | NtQuery/Scylla | https://github.com/NtQuery/Scylla | C++ | manual_review |
-| LordNoteworthy/al-khaser | https://github.com/LordNoteworthy/al-khaser | C++ | manual_review — não encontrado em 2026-11-10 (candidato: ayoubfaouzi/al-khaser) |
+| LordNoteworthy/al-khaser | https://github.com/LordNoteworthy/al-khaser | C++ | manual_review — não encontrado em 2026-11-10 (nome atual provável: ayoubfaouzi/al-khaser) |
 | yamadashy/repomix | https://github.com/yamadashy/repomix | TypeScript | manual_review |
 
 ## CREATOR — Projetos Criativos (11)

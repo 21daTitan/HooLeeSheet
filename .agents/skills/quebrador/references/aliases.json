@@ -1,0 +1,69 @@
+{
+  "notice": "Nome atual PROVÁVEL de repositórios do catálogo que a busca não encontrou. A existência do candidato foi conferida em 2026-11-10; a equivalência se apoia em descrição, dono e popularidade, não em redirecionamento oficial. A lista original do dono é preservada.",
+  "aliases": {
+    "ConsenSys/mythril": {
+      "current": "ConsenSysDiligence/mythril",
+      "basis": "original, 4,2 mil estrelas; descrição: análise simbólica de bytecode EVM"
+    },
+    "returntocorp/semgrep": {
+      "current": "semgrep/semgrep",
+      "basis": "original, 17,5 mil estrelas; descrição: análise estática leve"
+    },
+    "leondz/garak": {
+      "current": "NVIDIA/garak",
+      "basis": "original, 9,9 mil estrelas; descrição: scanner de vulnerabilidade de LLM"
+    },
+    "SecureAuthCorp/impacket": {
+      "current": "fortra/impacket",
+      "basis": "original, 16,2 mil estrelas; descrição: classes Python para protocolos de rede"
+    },
+    "BloodHoundAD/SharpHound": {
+      "current": "SpecterOps/SharpHound",
+      "basis": "original; descrição: coletor C# do BloodHound"
+    },
+    "fox-it/BloodHound.py": {
+      "current": "dirkjanm/BloodHound.py",
+      "basis": "original; descrição: coletor Python do BloodHound"
+    },
+    "fox-it/mitm6": {
+      "current": "dirkjanm/mitm6",
+      "basis": "original; descrição: IPv4 via IPv6"
+    },
+    "NVIDIA/NeMo-Guardrails": {
+      "current": "NVIDIA-NeMo/Guardrails",
+      "basis": "original, 7,4 mil estrelas; descrição: NeMo Guardrails"
+    },
+    "WithSecureLabs/drozer": {
+      "current": "ReversecLabs/drozer",
+      "basis": "original, 4,6 mil estrelas; descrição: avaliação de segurança Android"
+    },
+    "cloudsploit/scans": {
+      "current": "aquasecurity/cloudsploit",
+      "basis": "original, 3,7 mil estrelas; descrição: postura de segurança em nuvem"
+    },
+    "prysmaticlabs/prysm": {
+      "current": "OffchainLabs/prysm",
+      "basis": "original, 3,7 mil estrelas; descrição: Ethereum proof of stake em Go"
+    },
+    "LordNoteworthy/al-khaser": {
+      "current": "ayoubfaouzi/al-khaser",
+      "basis": "original, 7,1 mil estrelas; descrição: técnicas de detecção de sandbox e depurador"
+    },
+    "snyk/snyk": {
+      "current": "snyk/cli",
+      "basis": "original, 5,7 mil estrelas; descrição: Snyk CLI"
+    },
+    "elder-plinius/L1B3RT45": {
+      "current": "elder-plinius/L1B3RT4S",
+      "basis": "mesmo dono; provável erro de digitação (5 no lugar de S)"
+    },
+    "IPST/uefi-firmware-parser": {
+      "current": "theopolis/uefi-firmware-parser",
+      "basis": "provável dono errado; o candidato já está no catálogo"
+    },
+    "tandasat/MiniVisor": {
+      "current": "tandasat/MiniVisorPkg",
+      "basis": "mesmo dono; nome incompleto; o candidato já está no catálogo"
+    }
+  }
+}

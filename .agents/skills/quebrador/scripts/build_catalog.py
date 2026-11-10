@@ -35,6 +35,12 @@ for ln, line in enumerate((ROOT / 'references/catalog_raw.txt').read_text().spli
         elif category in MANUAL_REVIEW and obj['scope'] == 'read_only':
             obj['scope'] = 'manual_review'
 
+aliases = json.loads((ROOT / 'references/aliases.json').read_text())['aliases']
+for old, info in aliases.items():
+    obj = index[old.casefold()]
+    obj['current_repo'] = info['current']
+    obj['current_url'] = f"https://github.com/{info['current']}"
+    obj['current_basis'] = info['basis']
 out = list(index.values())
 (ROOT / 'references/repository_catalog.json').write_text(
     json.dumps({

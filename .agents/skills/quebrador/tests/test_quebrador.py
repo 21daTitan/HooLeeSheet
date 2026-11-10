@@ -93,7 +93,9 @@ class CatalogTest(unittest.TestCase):
         studied = [e for e in data['entries'] if e['status'] == 'legendas_analisadas']
         self.assertEqual(len(studied), 8)
         for entry in data['entries']:
-            self.assertIn(entry['status'], ('nao_revisado', 'legendas_analisadas', 'bloqueado'))
+            self.assertIn(entry['status'], ('nao_revisado', 'legendas_analisadas', 'metadados_analisados', 'bloqueado'))
+            if entry['status'] == 'metadados_analisados':
+                self.assertIn('somente metadados', (ROOT / 'references/youtube' / entry['estudo']).read_text())
         for entry in studied:
             text = (ROOT / 'references/youtube' / entry['estudo']).read_text()
             for marker in required:
@@ -277,6 +279,72 @@ class VerificationSnapshotTest(unittest.TestCase):
         self.assertTrue(all(r['clone_permission'] == 'none' for r in catalog))
         allowed = json.loads((ROOT / 'references/verification_sample.json').read_text())['confirmed_public']
         self.assertEqual(len(allowed), 13)
+
+
+class TtsEndToEndTest(unittest.TestCase):
+    """Cliente tts contra um servidor HTTP local que imita o contrato do Fish Speech."""
+
+    def test_tts_against_local_stub(self):
+        import base64
+        import http.server
+        import threading
+        seen = {}
+
+        class Stub(http.server.BaseHTTPRequestHandler):
+            def do_POST(self):
+                seen['path'] = self.path
+                seen['type'] = self.headers.get('Content-Type')
+                seen['body'] = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                self.send_response(200)
+                self.send_header('Content-Type', 'audio/wav')
+                self.end_headers()
+                self.wfile.write(b'RIFFfake-wav')
+
+            def log_message(self, *args):
+                pass
+
+        server = http.server.HTTPServer(('127.0.0.1', 0), Stub)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                sample = Path(tmp) / 'minha_voz.wav'
+                sample.write_bytes(b'RIFFsample')
+                out = Path(tmp) / 'saida' / 'fala.wav'
+                args = argparse.Namespace(
+                    text='Olá', out=str(out), server=f'http://127.0.0.1:{server.server_port}', format='wav',
+                    reference_id=None, reference_audio=str(sample), reference_text='amostra', consent=True, timeout=10)
+                with mock.patch.object(quebrador, 'STATE', Path(tmp) / 'state'), \
+                        mock.patch.object(quebrador, 'OUTPUT', Path(tmp) / 'outputs'), \
+                        mock.patch('builtins.print'):
+                    quebrador.tts(args)
+                    history = json.loads((Path(tmp) / 'state/history.json').read_text())
+                    self.assertIsNone(quebrador.verify_history(history))
+                self.assertEqual(out.read_bytes(), b'RIFFfake-wav')
+                self.assertEqual(history[-1]['action'], 'tts')
+                self.assertTrue(history[-1]['detail']['voice_reference_used'])
+                self.assertEqual(len(list((Path(tmp) / 'outputs').glob('tts-*.json'))), 1)
+        finally:
+            server.shutdown()
+            server.server_close()
+        self.assertEqual(seen['path'], '/v1/tts')
+        self.assertEqual(seen['type'], 'application/json')
+        self.assertEqual(seen['body']['text'], 'Olá')
+        self.assertEqual(base64.b64decode(seen['body']['references'][0]['audio']), b'RIFFsample')
+        self.assertEqual(seen['body']['references'][0]['text'], 'amostra')
+
+
+class AliasTest(unittest.TestCase):
+    def test_aliases_keep_original_and_point_to_missing_repos(self):
+        aliases = json.loads((ROOT / 'references/aliases.json').read_text())['aliases']
+        catalog = {e['repo']: e for e in json.loads((ROOT / 'references/repository_catalog.json').read_text())['entries']}
+        snap = json.loads((ROOT / 'references/security/verificacao-repos.json').read_text())['repositories']
+        self.assertEqual(len(aliases), 16)
+        for old, info in aliases.items():
+            self.assertEqual(catalog[old]['current_repo'], info['current'])
+            self.assertEqual(catalog[old]['url'], f'https://github.com/{old}')
+            self.assertEqual(snap[old]['status'], 'not_found')
+            self.assertTrue(info['basis'])
+        self.assertEqual(sum('current_repo' in e for e in catalog.values()), 16)
 
 
 if __name__ == '__main__':
