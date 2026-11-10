@@ -1,5 +1,10 @@
+import argparse
 import importlib.util
+import io
 import json
+import os
+import tempfile
+from unittest import mock
 from pathlib import Path
 import unittest
 
@@ -87,7 +92,7 @@ class CatalogTest(unittest.TestCase):
 
     def test_policy_version(self):
         cfg = json.loads((ROOT / 'config/policy.json').read_text())
-        self.assertEqual(cfg['version'], '1.1.0')
+        self.assertEqual(cfg['version'], '1.2.0')
 
     def test_validate_json_files(self):
         for jfile in (ROOT / 'references').rglob('*.json'):
@@ -95,6 +100,64 @@ class CatalogTest(unittest.TestCase):
                 json.loads(jfile.read_text(encoding='utf-8'))
             except json.JSONDecodeError:
                 self.fail(f'JSON inválido: {jfile.relative_to(ROOT)}')
+
+
+class AudioTest(unittest.TestCase):
+    def _sfx_args(self, **kw):
+        return argparse.Namespace(**{'query': 'chuva', 'limit': 5, 'max_duration': 30, 'download': 0, **kw})
+
+    def _tts_args(self, **kw):
+        base = {'text': 'teste', 'out': 'x.wav', 'server': 'http://localhost:8080', 'format': 'wav',
+                'reference_id': None, 'reference_audio': None, 'reference_text': '', 'consent': False, 'timeout': 5}
+        return argparse.Namespace(**{**base, **kw})
+
+    def test_sfx_requires_key(self):
+        with mock.patch.dict(os.environ, {}, clear=True):
+            with self.assertRaises(RuntimeError):
+                quebrador.sfx(self._sfx_args())
+
+    def test_sfx_parses_results_and_hides_key(self):
+        payload = {'results': [{'id': 7, 'name': 'Chuva forte', 'duration': 4.2, 'username': 'ana',
+                                'license': 'https://creativecommons.org/publicdomain/zero/1.0/',
+                                'previews': {'preview-hq-mp3': 'https://cdn.freesound.org/previews/0/7.mp3'}}]}
+        seen = {}
+
+        def fake(req, timeout=0):
+            seen['url'] = req.full_url
+            seen['auth'] = req.get_header('Authorization')
+            return io.BytesIO(json.dumps(payload).encode())
+
+        with tempfile.TemporaryDirectory() as tmp, \
+                mock.patch.dict(os.environ, {'FREESOUND_API_KEY': 'CHAVE-TESTE'}), \
+                mock.patch.object(quebrador, 'OUTPUT', Path(tmp)), \
+                mock.patch.object(quebrador, 'urlopen', fake), \
+                mock.patch('builtins.print'):
+            results = quebrador.sfx(self._sfx_args())
+            saved = list(Path(tmp).glob('sfx-*/results.json'))
+            self.assertEqual(len(saved), 1)
+            self.assertNotIn('CHAVE-TESTE', saved[0].read_text())
+        self.assertNotIn('CHAVE-TESTE', seen['url'])
+        self.assertEqual(seen['auth'], 'Token CHAVE-TESTE')
+        self.assertEqual(results[0]['author'], 'ana')
+        self.assertTrue(results[0]['preview'].endswith('7.mp3'))
+
+    def test_tts_local_only(self):
+        for host in ('localhost', '127.0.0.1', '192.168.1.10', '10.0.0.5'):
+            self.assertTrue(quebrador._is_local_host(host))
+        for host in ('api.fish.audio', '8.8.8.8', 'localhost.evil.com'):
+            self.assertFalse(quebrador._is_local_host(host))
+        with self.assertRaises(ValueError):
+            quebrador.tts(self._tts_args(server='https://api.fish.audio'))
+
+    def test_tts_voice_reference_needs_consent(self):
+        with self.assertRaises(ValueError):
+            quebrador.tts(self._tts_args(reference_audio='voz.wav', reference_text='oi'))
+
+    def test_tts_body_contract(self):
+        body = quebrador.build_tts_body('oi', 'wav', reference_audio=b'RIFF', reference_text='amostra')
+        self.assertEqual(body['references'], [{'audio': 'UklGRg==', 'text': 'amostra'}])
+        self.assertNotIn('reference_audio', body)
+        self.assertEqual(quebrador.build_tts_body('oi'), {'text': 'oi', 'format': 'wav'})
 
 
 if __name__ == '__main__':

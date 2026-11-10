@@ -25,24 +25,22 @@ O método gratuito **legítimo** é sempre o #2 (auto-hospedar). Não se trata d
 
 ### Método auto-hospedado (sem créditos)
 
+**[PENDENTE] Instalação não testada neste ambiente.** Os passos de instalação e os nomes dos pesos mudam entre versões: siga o README oficial do repositório para instalar, baixar os pesos e subir `tools/api_server.py`. Suba o servidor escutando em `127.0.0.1:8080` (não em `0.0.0.0`) para não expor a API na rede.
+
+Com o servidor local no ar, a skill gera a voz:
+
 ```bash
-# 1. Ambiente isolado
-python3 -m venv .venv && source .venv/bin/activate
+# Voz padrão do modelo
+python3 scripts/quebrador.py tts "Olá, teste local" --out narracao.wav
 
-# 2. Instalar (CPU ou CUDA)
-pip install fish-speech   # ou clonar o repo e pip install -e .
-
-# 3. Baixar pesos (uma vez)
-# via huggingface-cli download fishaudio/openaudio-s1-mini --local-dir checkpoints/
-
-# 4. Subir servidor de API LOCAL
-python -m tools.api_server --listen 0.0.0.0:8080 --llama-checkpoint-path checkpoints/
-
-# 5. Seu app chama a API LOCAL — zero créditos
-curl http://localhost:8080/v1/tts \
-  -H "Content-Type: application/json" \
-  -d '{"text":"Olá, teste local","reference_audio":"voz_autorizada.wav"}'
+# Com amostra de voz própria ou autorizada (exige --consent e a transcrição da amostra)
+python3 scripts/quebrador.py tts "Olá" --out narracao.wav \
+  --reference-audio minha_voz.wav --reference-text "texto falado na amostra" --consent
 ```
+
+- O comando recusa qualquer servidor que não seja `localhost` ou rede privada, então não gasta crédito do serviço pago.
+- Contrato usado (conferido em `fish_speech/utils/schema.py`, `ServeTTSRequest`): `text`, `format`, `reference_id` e `references: [{audio em base64, text}]`.
+- **[PENDENTE]** A rota `/v1/tts` vem da documentação do Fish e ainda não foi exercitada contra um servidor real; conferir no primeiro uso.
 
 - **Nenhuma chamada sai para fish.audio** → nenhum crédito consumido.
 - Para clonar voz: usar **apenas** amostra com consentimento comprovado (ou a sua própria voz).
@@ -84,28 +82,16 @@ A skill **pode buscar efeitos sonoros**. Escada de prioridade (grátis primeiro)
 
 ### Método de busca via Freesound (grátis)
 ```bash
-# Requer chave grátis em https://freesound.org/apiv2/apply/
-# A chave fica em variável de ambiente, NUNCA no código:
-export FREESOUND_API_KEY="..."   # definido pelo dono, fora do repo
+# Chave gratuita em https://freesound.org/apiv2/apply/ — fica em variável de ambiente, NUNCA no código
+export FREESOUND_API_KEY="..."
 
-curl -s "https://freesound.org/apiv2/search/text/?query=chuva+trovao&fields=name,previews,license&token=$FREESOUND_API_KEY"
-# Baixar o preview MP3 do resultado; respeitar a licença CC de cada som.
+python3 scripts/quebrador.py sfx "chuva trovão"                 # lista nome, duração, licença, autor e prévia
+python3 scripts/quebrador.py sfx "porta rangendo" --download 3  # baixa a prévia MP3 dos 3 primeiros
 ```
+Os resultados ficam em `outputs/sfx-<id>/results.json`. Cada som tem licença própria (CC0, CC-BY, CC-BY-NC): guarde autor e licença para a atribuição. **[PENDENTE]** Testado só com resposta simulada; a primeira busca real depende da chave do dono.
 
 ### Método de geração local via AudioGen (grátis)
-```bash
-pip install audiocraft
-python -c "
-from audiocraft.models import AudioGen
-import torchaudio
-m = AudioGen.get_pretrained('facebook/audiogen-medium')
-m.set_generation_params(duration=5)
-wav = m.generate(['passos na madeira', 'porta rangendo'])
-for i, a in enumerate(wav):
-    torchaudio.save(f'sfx_{i}.wav', a.cpu(), m.sample_rate)
-"
-# Roda local; nenhum crédito; apenas CPU/GPU e tempo.
-```
+**[PENDENTE] Não testado neste ambiente** e fora do CLI, porque exige instalar `audiocraft` e `torch`. Seguir o README oficial do AudioCraft; a geração roda local, sem créditos.
 
 ---
 

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Foco No Progresso — Quebrador CLI v1.1.0
+"""Foco No Progresso — Quebrador CLI v1.2.0
 
 Sem dependências externas obrigatórias. Backends opcionais para análise audiovisual.
 Nenhum código de terceiros é executado, instalado ou clonado sem autorização.
 """
 from __future__ import annotations
 import argparse
+import base64
 import importlib.util
 import ipaddress
 from collections import Counter
@@ -20,7 +21,7 @@ import subprocess
 import sys
 import time
 from urllib.parse import urlparse, urlunparse, parse_qs, parse_qsl, urlencode, quote
-from urllib.request import Request, urlopen
+from urllib.request import ProxyHandler, Request, build_opener, urlopen
 from urllib.error import HTTPError, URLError
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -444,6 +445,112 @@ def report(args):
     print(text)
 
 
+FREESOUND_SEARCH = 'https://freesound.org/apiv2/search/text/'
+
+
+def sfx(args):
+    """Busca efeitos sonoros no Freesound; baixa prévias só com --download."""
+    key = os.environ.get('FREESOUND_API_KEY')
+    if not key:
+        raise RuntimeError('FREESOUND_API_KEY ausente. Crie uma chave gratuita em '
+                           'https://freesound.org/apiv2/apply/ e defina a variável de ambiente')
+    params = urlencode({'query': args.query, 'page_size': args.limit,
+                        'fields': 'id,name,duration,license,username,previews',
+                        'filter': f'duration:[0 TO {args.max_duration}]'})
+    req = Request(FREESOUND_SEARCH + '?' + params,
+                  headers={'Authorization': 'Token ' + key, 'User-Agent': 'Quebrador-Research/1.2'})
+    try:
+        with urlopen(req, timeout=20) as response:
+            data = json.load(response)
+    except HTTPError as exc:
+        raise RuntimeError(f'Freesound respondeu HTTP {exc.code}') from exc
+    except (URLError, TimeoutError, OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f'Falha ao consultar o Freesound: {type(exc).__name__}') from exc
+    results = [{'id': r.get('id'), 'name': r.get('name'), 'duration': r.get('duration'),
+                'license': r.get('license'), 'author': r.get('username'),
+                'preview': (r.get('previews') or {}).get('preview-hq-mp3')}
+               for r in data.get('results', [])]
+    dest = OUTPUT / ('sfx-' + sha256(args.query.encode('utf-8')).hexdigest()[:16])
+    for item in results[:args.download]:
+        url = urlparse(item['preview'] or '')
+        host = url.hostname or ''
+        if url.scheme != 'https' or not (host == 'freesound.org' or host.endswith('.freesound.org')):
+            item['download'] = 'recusado: host fora do Freesound'
+            continue
+        dest.mkdir(parents=True, exist_ok=True)
+        target = dest / f"{int(item['id'])}.mp3"
+        try:
+            with urlopen(Request(item['preview'], headers={'User-Agent': 'Quebrador-Research/1.2'}), timeout=60) as response:
+                target.write_bytes(response.read())
+            item['download'] = str(target)
+        except (HTTPError, URLError, TimeoutError, OSError) as exc:
+            item['download'] = f'falhou: {type(exc).__name__}'
+    save_json(dest / 'results.json', {'query': args.query, 'source': 'freesound.org',
+                                      'observed_at': stamp(), 'results': results})
+    for item in results:
+        print(f"[{item['id']}] {item['name']} — {item['duration']}s — autor: {item['author']}")
+        print(f"    licença: {item['license']}")
+        print(f"    prévia: {item.get('download') or item['preview']}")
+    print(f"{len(results)} resultado(s) salvos em {dest / 'results.json'}; respeite a licença e a atribuição de cada som")
+    return results
+
+
+def _is_local_host(host: str) -> bool:
+    if host == 'localhost':
+        return True
+    try:
+        ip = ipaddress.ip_address(host)
+    except ValueError:
+        return False
+    return ip.is_loopback or ip.is_private
+
+
+def build_tts_body(text: str, fmt: str = 'wav', reference_id: str | None = None,
+                   reference_audio: bytes | None = None, reference_text: str = '') -> dict:
+    """Corpo no contrato ServeTTSRequest do Fish Speech."""
+    body = {'text': text, 'format': fmt}
+    if reference_id:
+        body['reference_id'] = reference_id
+    if reference_audio is not None:
+        body['references'] = [{'audio': base64.b64encode(reference_audio).decode('ascii'), 'text': reference_text}]
+    return body
+
+
+def tts(args):
+    """Gera voz por um servidor Fish Speech local; nunca chama serviço pago."""
+    server = urlparse(args.server)
+    if server.scheme not in ('http', 'https') or not server.hostname or not _is_local_host(server.hostname):
+        raise ValueError('Servidor recusado: tts só usa Fish Speech local (localhost ou rede privada). '
+                         'Serviço pago exige autorização específica do dono')
+    audio = None
+    if args.reference_audio:
+        if not args.consent:
+            raise ValueError('Referência de voz bloqueada sem --consent: use só voz própria ou com consentimento verificável')
+        if not args.reference_text:
+            raise ValueError('--reference-audio exige --reference-text com a transcrição da amostra')
+        audio = Path(args.reference_audio).expanduser().read_bytes()
+    body = build_tts_body(args.text, args.format, args.reference_id, audio, args.reference_text)
+    req = Request(args.server.rstrip('/') + '/v1/tts', data=json.dumps(body).encode('utf-8'),
+                  headers={'Content-Type': 'application/json'}, method='POST')
+    try:
+        with build_opener(ProxyHandler({})).open(req, timeout=args.timeout) as response:
+            data = response.read()
+    except HTTPError as exc:
+        raise RuntimeError(f'Servidor Fish local respondeu HTTP {exc.code}: {exc.read()[:300]!r}') from exc
+    except (URLError, TimeoutError, OSError) as exc:
+        raise RuntimeError(f'Servidor Fish local não respondeu em {args.server} ({type(exc).__name__}); '
+                           'ver references/creative/audio-efeitos-sonoros.md') from exc
+    out = Path(args.out).expanduser().resolve()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_bytes(data)
+    ident = sha256(data).hexdigest()
+    save_json(OUTPUT / f'tts-{ident[:16]}.json', {
+        'text': args.text, 'server': args.server, 'format': args.format, 'file': str(out), 'sha256': ident,
+        'reference_id': args.reference_id, 'voice_reference_used': audio is not None,
+        'consent_declared': bool(args.consent), 'date_utc': stamp()})
+    print(f'Áudio salvo: {out} ({len(data)} bytes)')
+
+
 def validate(args):
     """Valida consistência dos catálogos."""
     errors = []
@@ -557,6 +664,23 @@ def main():
 
     p = sub.add_parser('validate', help='Valida consistência dos catálogos')
     p.add_argument('--domain', choices=['all', 'repos', 'refs'], default='all')
+
+    p = sub.add_parser('sfx', help='Busca efeitos sonoros no Freesound (requer FREESOUND_API_KEY)')
+    p.add_argument('query')
+    p.add_argument('--limit', type=int, default=10, choices=range(1, 31), metavar='1..30')
+    p.add_argument('--max-duration', type=int, default=30, help='Duração máxima em segundos')
+    p.add_argument('--download', type=int, default=0, help='Baixar a prévia MP3 dos N primeiros')
+
+    p = sub.add_parser('tts', help='Gera voz por servidor Fish Speech local (sem créditos)')
+    p.add_argument('text')
+    p.add_argument('--out', required=True)
+    p.add_argument('--server', default='http://localhost:8080')
+    p.add_argument('--format', choices=['wav', 'mp3', 'opus', 'pcm'], default='wav')
+    p.add_argument('--reference-id')
+    p.add_argument('--reference-audio', help='Amostra de voz autorizada')
+    p.add_argument('--reference-text', default='', help='Transcrição da amostra')
+    p.add_argument('--consent', action='store_true', help='Declara consentimento do dono da voz')
+    p.add_argument('--timeout', type=int, default=300)
 
     args = parser.parse_args()
     if args.cmd == 'check-repos' and not (1 <= args.limit <= 30):

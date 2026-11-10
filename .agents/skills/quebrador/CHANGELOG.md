@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0 — 2026-11-10
+- Subcomando `sfx`: busca efeitos sonoros no Freesound, com licença e autor por resultado
+- Subcomando `tts`: voz por servidor Fish Speech local; recusa servidor público e exige `--consent` para amostra de voz
+- `references/creative/audio-efeitos-sonoros.md`: método de áudio local e correção do contrato da API do Fish
+- Pendente: `sfx` e `tts` validados só por testes simulados, ainda não contra os serviços reais
+
 ## 1.1.0 — 2026-11-10
 - Integração com estrutura dSantCreator `.agents/skills/quebrador/`
 - SKILL.md coordenador com tabela de roteamento por domínio

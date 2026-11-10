@@ -1,6 +1,6 @@
 ---
 name: quebrador
-version: 1.1.0
+version: 1.2.0
 description: Skill universal Quebrador — Foco No Progresso. Coordenador de pesquisa rastreável, engenharia reversa de vídeos, estudo de repositórios, catálogos de segurança, ferramentas criativas e automação supervisionada.
 ---
 
@@ -57,6 +57,8 @@ python3 scripts/quebrador.py validate         # valida consistência dos catálo
 python3 scripts/quebrador.py report           # gera relatório de status
 python3 scripts/quebrador.py refs             # lista referências do intake
 python3 scripts/quebrador.py record           # histórico encadeado
+python3 scripts/quebrador.py sfx "TERMO"       # efeitos sonoros no Freesound (FREESOUND_API_KEY)
+python3 scripts/quebrador.py tts "TEXTO" --out ARQ  # voz por servidor Fish Speech local
 ```
 
 Dependências opcionais para análise audiovisual: `pip install -r requirements-video.txt`
