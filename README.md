@@ -27,6 +27,19 @@ Interface local: http://127.0.0.1:8080. Para acessar uma VPS pelo celular ou com
 - Instalador e pacote de contexto para chats web.
 - 25 testes locais aprovados antes do upload.
 
+## Skill Quebrador — Foco No Progresso
+
+Fica em `.agents/skills/quebrador/`, fora do pacote `dSantCreator-3.2.0-source.tar.gz`. Reúne catálogos de pesquisa (repositórios, MCPs, skills, sites, YouTube, ferramentas criativas e de áudio) e um CLI sem dependências obrigatórias. Os catálogos são inventário não verificado; qualquer ação que altere estado exige autorização do dono.
+
+```bash
+cd .agents/skills/quebrador
+python3 scripts/quebrador.py doctor
+python3 scripts/quebrador.py catalog web --search exploit
+python3 -m unittest discover -s tests
+```
+
+Detalhes em `.agents/skills/quebrador/SKILL.md`.
+
 ## Uso sem API
 
 O núcleo prepara contratos, referências e contexto. O chat do seu aplicativo executa o briefing com suas ferramentas. Geração pelo SagaZ exige configurar um endpoint; assinatura de chat não implica créditos de API.

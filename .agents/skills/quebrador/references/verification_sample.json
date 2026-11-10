@@ -1,0 +1,24 @@
+{
+  "checked_on": "2026-11-10",
+  "method": "GitHub connector get_repo; manual subset, NOT full-catalog audit; 404 can mean inaccessible/private/moved",
+  "confirmed_public": [
+    "Panniantong/Agent-Reach",
+    "yamadashy/repomix",
+    "tandasat/MiniVisorPkg",
+    "tandasat/SimpleVisor",
+    "DarkyHArry/cassandra-agent",
+    "mromidev/claude-animated-shorts",
+    "DietrichGebert/ponytail",
+    "NationalSecurityAgency/ghidra",
+    "Breakthrough/PySceneDetect",
+    "theopolis/uefi-firmware-parser",
+    "microsoft/Windows-driver-samples",
+    "ionescu007/SimpleVisor",
+    "rizinorg/cutter"
+  ],
+  "not_found_or_inaccessible": [
+    "IPST/uefi-firmware-parser",
+    "tandasat/MiniVisor"
+  ],
+  "warnings": ["Repository existence is not a safety or quality guarantee", "Windows-driver-samples differed in capitalization only; GitHub is case-insensitive in lookup", "Do not auto-replace a source with a guessed repository"]
+}

@@ -1,0 +1,60 @@
+name: Verificar metadados públicos de repositórios
+on:
+  workflow_dispatch:
+    inputs:
+      approval_phrase:
+        description: 'Digite exatamente AUTORIZO PESQUISA E PR para autorizar esta execução única'
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  watch:
+    if: github.actor == '21daTitan' && inputs.approval_phrase == 'AUTORIZO PESQUISA E PR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar antes de qualquer atualização
+        run: python -m unittest discover -s .agents/skills/quebrador/tests -v
+      - name: Continuar de snapshot anterior não mesclado
+        shell: bash
+        run: |
+          if git fetch --no-tags origin refs/heads/auto/public-metadata:refs/remotes/origin/auto/public-metadata 2>/dev/null; then
+            for f in .agents/skills/quebrador/state/repo-health.json .agents/skills/quebrador/state/repo-delta.json .agents/skills/quebrador/state/research-report.md; do
+              git show "origin/auto/public-metadata:$f" > "$f" 2>/dev/null || true
+            done
+          fi
+      - name: Consultar metadados públicos do GitHub (API somente leitura)
+        run: |
+          python .agents/skills/quebrador/scripts/quebrador.py check-repos --limit 25
+          python .agents/skills/quebrador/scripts/quebrador.py report
+      - name: Criar ou atualizar branch de proposta
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'quebrador-review-bot'
+          git config user.email 'quebrador-review-bot@users.noreply.github.com'
+          git add .agents/skills/quebrador/state/repo-health.json .agents/skills/quebrador/state/repo-delta.json .agents/skills/quebrador/state/research-report.md
+          if git diff --cached --quiet; then echo 'Sem mudanças de metadados'; exit 0; fi
+          git fetch --no-tags origin main
+          git switch -C auto/public-metadata
+          git commit -m 'docs: proposta de metadados públicos atualizados'
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push --force-with-lease origin HEAD:refs/heads/auto/public-metadata
+          existing=$(gh pr list --repo "$REPO" --head auto/public-metadata --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$existing" ]; then
+            gh pr create --repo "$REPO" --base main --head auto/public-metadata \
+              --title 'Revisão: metadados externos atualizados' \
+              --body 'Apenas metadados públicos; nenhum código baixado/executado. Revise antes de mesclar.'
+          else
+            echo "PR existente atualizado: #$existing"
+          fi
