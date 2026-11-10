@@ -1,0 +1,50 @@
+{
+  "notice": "Referências fornecidas pelo usuário; conteúdo NÃO ingerido nem validado. Títulos são rótulos, não verificação.",
+  "version": "1.1.0",
+  "domains": {
+    "security": {"catalog": "security/repos-catalog.md", "count": 288, "scope": "repositórios de pesquisa defensiva"},
+    "mcp_servers": {"catalog": "security/mcp-servers.md", "count": 30, "scope": "inventário, não instalados"},
+    "skills": {"catalog": "security/skills-catalog.md", "count": 32, "scope": "inventário, não instalados"},
+    "websites": {"catalog": "websites/", "count": 5, "scope": "bancos de exploits, vulnerabilidades, rede, hash, anonimato"},
+    "youtube": {"catalog": "youtube/fontes-aprendizado.json", "count": 10, "scope": "fila de estudo, não assistidos"},
+    "creative": {"catalog": "creative/", "count": 2, "scope": "ferramentas de design e inspiração"},
+    "external": {"catalog": "external/", "count": 2, "scope": "projetos GitHub e recursos de aprendizado"}
+  },
+  "youtube": [
+    {"url":"https://youtube.com/playlist?list=PLBPobzL8BYoHZPSfnfrPR02eE5Xb4JeLi", "title_provided":"Playlist para Estudo e Uso como HackingTool", "lane":"security_defensive"},
+    {"url":"https://youtu.be/e2Fykz51Nxg", "title_provided":"Documentário Estilo Netflix - ClaudeCode", "lane":"creator"},
+    {"url":"https://youtu.be/zGimjuSqH5E", "title_provided":"Clonar Voz de Qualquer Pessoa", "lane":"creator", "note":"Only consented voice references; no impersonation"},
+    {"url":"https://youtu.be/iOr1mbFK7G8", "title_provided":"Venda mais que um golpista", "lane":"marketing", "note":"Truthful, legal marketing only"},
+    {"url":"https://youtu.be/AWbpxJPzltc", "title_provided":"Sem título fornecido", "lane":"marketing"},
+    {"url":"https://youtu.be/t9qAIgaguRY", "title_provided":"Contingência de nicho hot", "lane":"hot_creator"},
+    {"url":"https://youtu.be/1vDxSy3xov4", "title_provided":"Aprenda a vender qualquer coisa", "lane":"marketing"},
+    {"url":"https://youtu.be/hEBmmSCZODg", "title_provided":"Sem título", "lane":"core"},
+    {"url":"https://youtu.be/YAYRxSe0Oaw", "title_provided":"Nicho Hot criativo", "lane":"hot_creator"},
+    {"url":"https://youtube.com/@blackghost.ai01", "title_provided":"Canal de referência", "lane":"creator"}
+  ],
+  "other": [
+    {"url":"https://app.notion.com/p/f4a8a9a2be21405190d8919899568a6f?v=3e0107948961811386b2000cf885cd6b", "label":"UGC curso Marcola, material privado a acessar com permissão", "lane":"creator"},
+    {"url":"https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f", "label":"Karpathy LLM Wiki", "lane":"core"},
+    {"url":"https://obsidian.md/download", "label":"Obsidian", "lane":"core"},
+    {"url":"https://github.com/Panniantong/Agent-Reach", "label":"Social research bridge", "lane":"core"},
+    {"url":"https://github.com/yamadashy/repomix", "label":"Codebase context packing", "lane":"core"},
+    {"url":"https://github.com/mrdoob/three.js", "label":"3D creation library", "lane":"creator"},
+    {"url":"https://github.com/mazzeoia/mazyos-scraper", "label":"Scraping tool - audit before use", "lane":"core"}
+  ],
+  "media_education_resources": [
+    "https://recraft.ai/", "https://ideogram.ai/", "https://leonardo.ai/", "https://www.canva.com/",
+    "https://www.adobe.com/express/", "https://chatgpt.com/", "https://gemini.google.com/",
+    "https://www.figma.com/", "https://runwayml.com/", "https://klingai.com/", "https://pika.art/",
+    "https://www.capcut.com/", "https://veo.google/", "https://hailuoai.video/", "https://lumalabs.ai/",
+    "https://www.pinterest.com/", "https://www.behance.net/", "https://dribbble.com/", "https://www.artstation.com/"
+  ],
+  "security_directories_reference_only": [
+    "https://www.exploit-db.com/", "https://www.shodan.io/", "https://www.zoomeye.hk/", "https://fofa.info/",
+    "https://www.onyphe.io/", "https://packetstormsecurity.com/", "https://nvd.nist.gov/",
+    "https://www.cvedetails.com/", "https://www.kb.cert.org/vuls/", "https://www.virustotal.com/",
+    "https://www.kali.org/tools/", "https://www.blackarch.org/tools.html",
+    "https://www.yougetsignal.com/", "https://www.dnswatch.info/", "https://bgp.he.net/",
+    "https://securitytrails.com/", "https://ip-api.com/", "https://ipleak.net/"
+  ],
+  "verification_state": "pending"
+}

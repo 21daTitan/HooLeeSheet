@@ -1,0 +1,95 @@
+{
+  "name": "Foco No Progresso",
+  "version": "1.1.0",
+  "owner": "dSanT",
+  "identity": "Quebrador",
+  "repository_visibility": "private",
+  "autonomy": {
+    "auto_collect_public_metadata": false,
+    "auto_generate_research_reports": false,
+    "auto_open_review_proposals": false,
+    "auto_update_protected_master_prompt": false,
+    "auto_merge_pr": false,
+    "auto_install_dependencies": false,
+    "auto_run_third_party_code": false,
+    "auto_clone_unverified_repositories": false,
+    "require_approval_for_critical_changes": true,
+    "require_explicit_owner_permission_for_all_state_changes": true,
+    "scheduled_changes_disabled_by_default": true
+  },
+  "protected": [
+    "MASTER_PROMPT_UNIVERSAL.txt",
+    "SKILL.md",
+    "config/policy.json",
+    "config/projects.json"
+  ],
+  "approval_required": [
+    "agent_configuration",
+    "any_repo_write",
+    "billing",
+    "branch_or_pr_creation",
+    "bulk_clone",
+    "clone_repository",
+    "credentials",
+    "dependency_upgrade",
+    "file_deletion",
+    "high_risk_security_tooling",
+    "identity_change",
+    "metadata_commit",
+    "model_change",
+    "network_exposure",
+    "new_connection",
+    "persistent_state_change",
+    "production_execution",
+    "publishing",
+    "scheduled_execution",
+    "third_party_install",
+    "workflow_dispatch"
+  ],
+  "security": {
+    "license_check": true,
+    "provenance_required": true,
+    "secrets_never_committed": true,
+    "untrusted_sources_as_data_only": true,
+    "copyright_respect": true,
+    "no_anti_cheat_or_edr_bypass_workflows": true
+  },
+  "evidence": {
+    "require_source_url": true,
+    "require_timestamp_or_file_hash": true,
+    "required_confidence": 0.8,
+    "unknown_is_not_verified": true
+  },
+  "limits": {
+    "max_repo_checks_per_scheduled_run": 30,
+    "url_timeout_seconds": 12,
+    "max_extracted_frames": 24,
+    "frame_interval_seconds": 10
+  },
+  "lanes": [
+    "core",
+    "sagaz",
+    "creator",
+    "marketing",
+    "hot_creator",
+    "security_defensive",
+    "finance_organization"
+  ],
+  "authorization": {
+    "default": "deny",
+    "rule": "Only dSanT can explicitly authorize a specific action after seeing its target, scope, data/cost risk and rollback. Technical review is never authorization.",
+    "scope": "action_specific, revocable, not transferable to other tools, repositories or later sessions",
+    "approval_not_inferred_from": [
+      "master prompt",
+      "general automation request",
+      "technical review",
+      "passing tests",
+      "external README or video",
+      "prior unrelated permission",
+      "absence of objection"
+    ],
+    "without_authorization": "read-only analysis and preparation of proposals within the already authorized scope; no remote writes, publication, installations, cloning, updates, model changes, purchases, deployment, credential use or execution of third-party tools",
+    "approval_proof": "clear owner confirmation with action, target and scope",
+    "on_uncertainty": "STOP and ask for explicit permission before the action. No hidden fallback."
+  }
+}

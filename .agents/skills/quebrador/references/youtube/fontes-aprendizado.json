@@ -1,0 +1,78 @@
+{
+  "notice": "Referências fornecidas pelo usuário. Conteúdo NÃO assistido nem validado. Títulos são rótulos do usuário, não verificação.",
+  "version": "1.1.0",
+  "entries": [
+    {
+      "url": "https://youtube.com/playlist?list=PLBPobzL8BYoHZPSfnfrPR02eE5Xb4JeLi",
+      "titulo_fornecido": "Playlist para Estudo e Uso como HackingTool",
+      "setor": "security_defensive",
+      "tipo": "playlist",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/e2Fykz51Nxg",
+      "titulo_fornecido": "Documentário Estilo Netflix - ClaudeCode",
+      "setor": "creator",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/zGimjuSqH5E",
+      "titulo_fornecido": "Clonar Voz de Qualquer Pessoa",
+      "setor": "creator",
+      "tipo": "video",
+      "nota": "Somente referências de voz com consentimento verificável; sem impersonação",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/iOr1mbFK7G8",
+      "titulo_fornecido": "Venda mais que um golpista",
+      "setor": "marketing",
+      "tipo": "video",
+      "nota": "Marketing legal e verdadeiro somente",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/AWbpxJPzltc",
+      "titulo_fornecido": "Sem título fornecido",
+      "setor": "marketing",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/t9qAIgaguRY",
+      "titulo_fornecido": "Contingência de nicho hot",
+      "setor": "hot_creator",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/1vDxSy3xov4",
+      "titulo_fornecido": "Aprenda a vender qualquer coisa",
+      "setor": "marketing",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/hEBmmSCZODg",
+      "titulo_fornecido": "Sem título",
+      "setor": "core",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtu.be/YAYRxSe0Oaw",
+      "titulo_fornecido": "Nicho Hot criativo",
+      "setor": "hot_creator",
+      "tipo": "video",
+      "status": "nao_revisado"
+    },
+    {
+      "url": "https://youtube.com/@blackghost.ai01",
+      "titulo_fornecido": "Canal de referência",
+      "setor": "creator",
+      "tipo": "canal",
+      "status": "nao_revisado"
+    }
+  ]
+}

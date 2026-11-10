@@ -1,0 +1,2896 @@
+{
+  "notice": "Source slugs as provided; not yet verified as extant, safe, open source, or currently maintained. Never auto-clone, install, run, or execute them.",
+  "total_distinct": 288,
+  "entries": [
+    {
+      "repo": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "radareorg/radare2",
+      "url": "https://github.com/radareorg/radare2",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "rizinorg/rizin",
+      "url": "https://github.com/rizinorg/rizin",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "rizinorg/cutter",
+      "url": "https://github.com/rizinorg/cutter",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "cea-sec/miasm",
+      "url": "https://github.com/cea-sec/miasm",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "keystone-engine/keystone",
+      "url": "https://github.com/keystone-engine/keystone",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "capstone-engine/capstone",
+      "url": "https://github.com/capstone-engine/capstone",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "unicorn-engine/unicorn",
+      "url": "https://github.com/unicorn-engine/unicorn",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "qilingframework/qiling",
+      "url": "https://github.com/qilingframework/qiling",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "angr/angr",
+      "url": "https://github.com/angr/angr",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "lifting-bits/mcsema",
+      "url": "https://github.com/lifting-bits/mcsema",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "microsoft/binskim",
+      "url": "https://github.com/microsoft/binskim",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "google/binnavi",
+      "url": "https://github.com/google/binnavi",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "rwfpl/rewolf-wow64ext",
+      "url": "https://github.com/rwfpl/rewolf-wow64ext",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "hasherezade/pe-sieve",
+      "url": "https://github.com/hasherezade/pe-sieve",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "hasherezade/hollows_hunter",
+      "url": "https://github.com/hasherezade/hollows_hunter",
+      "categories": [
+        "RE",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "thefLink/Hunt-Sleeping-Beacons",
+      "url": "https://github.com/thefLink/Hunt-Sleeping-Beacons",
+      "categories": [
+        "RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "TheCruZ/kdmapper",
+      "url": "https://github.com/TheCruZ/kdmapper",
+      "categories": [
+        "KERNEL",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "hfiref0x/KDU",
+      "url": "https://github.com/hfiref0x/KDU",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Cr4sh/KernelForge",
+      "url": "https://github.com/Cr4sh/KernelForge",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "j00ru/windows-syscalls",
+      "url": "https://github.com/j00ru/windows-syscalls",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "winsiderss/systeminformer",
+      "url": "https://github.com/winsiderss/systeminformer",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ionescu007/SpecuCheck",
+      "url": "https://github.com/ionescu007/SpecuCheck",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "microsoft/Windows-Driver-Frameworks",
+      "url": "https://github.com/microsoft/Windows-Driver-Frameworks",
+      "categories": [
+        "KERNEL",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "microsoft/Windows-driver-samples",
+      "url": "https://github.com/microsoft/Windows-driver-samples",
+      "categories": [
+        "KERNEL",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "tandasat/HyperPlatform",
+      "url": "https://github.com/tandasat/HyperPlatform",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "tandasat/MiniVisorPkg",
+      "url": "https://github.com/tandasat/MiniVisorPkg",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "tandasat/SimpleVisor",
+      "url": "https://github.com/tandasat/SimpleVisor",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ionescu007/VisualUefi",
+      "url": "https://github.com/ionescu007/VisualUefi",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Air14/SmmLoader",
+      "url": "https://github.com/Air14/SmmLoader",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "IPST/uefi-firmware-parser",
+      "url": "https://github.com/IPST/uefi-firmware-parser",
+      "categories": [
+        "KERNEL",
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "SinaKarvandi/Hypervisor-From-Scratch",
+      "url": "https://github.com/SinaKarvandi/Hypervisor-From-Scratch",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "deepinstinct/BlockEtw",
+      "url": "https://github.com/deepinstinct/BlockEtw",
+      "categories": [
+        "KERNEL"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ocornut/imgui",
+      "url": "https://github.com/ocornut/imgui",
+      "categories": [
+        "HOOKING"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Rebzzel/kiero",
+      "url": "https://github.com/Rebzzel/kiero",
+      "categories": [
+        "HOOKING"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "stevemk14ebr/PolyHook_2_0",
+      "url": "https://github.com/stevemk14ebr/PolyHook_2_0",
+      "categories": [
+        "HOOKING"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "TsudaKageyu/minhook",
+      "url": "https://github.com/TsudaKageyu/minhook",
+      "categories": [
+        "HOOKING"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "DarthTon/Xenos",
+      "url": "https://github.com/DarthTon/Xenos",
+      "categories": [
+        "HOOKING"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "danielkrupinski/Osiris",
+      "url": "https://github.com/danielkrupinski/Osiris",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "danielkrupinski/CSGOSimple",
+      "url": "https://github.com/danielkrupinski/CSGOSimple",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "cheat-engine/cheat-engine",
+      "url": "https://github.com/cheat-engine/cheat-engine",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "perfare/il2cppdumper",
+      "url": "https://github.com/perfare/il2cppdumper",
+      "categories": [
+        "CHEATS",
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Encryqed/Dumper-7",
+      "url": "https://github.com/Encryqed/Dumper-7",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "FlexingCodes/ChessCheat",
+      "url": "https://github.com/FlexingCodes/ChessCheat",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "DarkyHArry/Mythos-Driver",
+      "url": "https://github.com/DarkyHArry/Mythos-Driver",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "DarkyHArry/cassandra-agent",
+      "url": "https://github.com/DarkyHArry/cassandra-agent",
+      "categories": [
+        "CHEATS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "nlohmann/json",
+      "url": "https://github.com/nlohmann/json",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "fmtlib/fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "gabime/spdlog",
+      "url": "https://github.com/gabime/spdlog",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "jbeder/yaml-cpp",
+      "url": "https://github.com/jbeder/yaml-cpp",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Tencent/rapidjson",
+      "url": "https://github.com/Tencent/rapidjson",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "simdjson/simdjson",
+      "url": "https://github.com/simdjson/simdjson",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "google/googletest",
+      "url": "https://github.com/google/googletest",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "catchorg/Catch2",
+      "url": "https://github.com/catchorg/Catch2",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "boostorg/boost",
+      "url": "https://github.com/boostorg/boost",
+      "categories": [
+        "LIBS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "thefLink/DeepSleep",
+      "url": "https://github.com/thefLink/DeepSleep",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Idov31/Cronos",
+      "url": "https://github.com/Idov31/Cronos",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "hasherezade/FOLIAGE",
+      "url": "https://github.com/hasherezade/FOLIAGE",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "mgeeky/ShellcodeFluctuation",
+      "url": "https://github.com/mgeeky/ShellcodeFluctuation",
+      "categories": [
+        "EVASION",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "outflanknl/edr-internals",
+      "url": "https://github.com/outflanknl/edr-internals",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "anthemtotheego/InlineExecute-Assembly",
+      "url": "https://github.com/anthemtotheego/InlineExecute-Assembly",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "klezVirus/CheeseTools",
+      "url": "https://github.com/klezVirus/CheeseTools",
+      "categories": [
+        "EVASION",
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "SECFORCE/SharpWhispers",
+      "url": "https://github.com/SECFORCE/SharpWhispers",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "klezVirus/SysWhispers3",
+      "url": "https://github.com/klezVirus/SysWhispers3",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "trickster0/TartarusGate",
+      "url": "https://github.com/trickster0/TartarusGate",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "am0nsec/HellsGate",
+      "url": "https://github.com/am0nsec/HellsGate",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "boku7/AsmHalosGate",
+      "url": "https://github.com/boku7/AsmHalosGate",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "byt3bl33d3r/OffensiveNim",
+      "url": "https://github.com/byt3bl33d3r/OffensiveNim",
+      "categories": [
+        "EVASION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "redcanaryco/atomic-red-team",
+      "url": "https://github.com/redcanaryco/atomic-red-team",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "redcanaryco/invoke-atomicredteam",
+      "url": "https://github.com/redcanaryco/invoke-atomicredteam",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "rapid7/metasploit-framework",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "rapid7/metasploit-payloads",
+      "url": "https://github.com/rapid7/metasploit-payloads",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "offensive-security/exploitdb",
+      "url": "https://github.com/offensive-security/exploitdb",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Gallopsled/pwntools",
+      "url": "https://github.com/Gallopsled/pwntools",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "JonathanSalwan/ROPgadget",
+      "url": "https://github.com/JonathanSalwan/ROPgadget",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "longld/peda",
+      "url": "https://github.com/longld/peda",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "pwndbg/pwndbg",
+      "url": "https://github.com/pwndbg/pwndbg",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "hugsy/gef",
+      "url": "https://github.com/hugsy/gef",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "secdev/scapy",
+      "url": "https://github.com/secdev/scapy",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "gentilkiwi/mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "b4rtik/RedPeanut",
+      "url": "https://github.com/b4rtik/RedPeanut",
+      "categories": [
+        "REDTEAM"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "OWASP/www-project-top-10-for-large-language-model-applications",
+      "url": "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "corca-ai/awesome-llm-security",
+      "url": "https://github.com/corca-ai/awesome-llm-security",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "verazuo/jailbreak_llms",
+      "url": "https://github.com/verazuo/jailbreak_llms",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "elder-plinius/L1B3RT45",
+      "url": "https://github.com/elder-plinius/L1B3RT45",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "elder-plinius/OBLITERATUS",
+      "url": "https://github.com/elder-plinius/OBLITERATUS",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "protectai/llm-guard",
+      "url": "https://github.com/protectai/llm-guard",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "meta-llama/PurpleLlama",
+      "url": "https://github.com/meta-llama/PurpleLlama",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "NVIDIA/NeMo-Guardrails",
+      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "leondz/garak",
+      "url": "https://github.com/leondz/garak",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "confident-ai/deepeval",
+      "url": "https://github.com/confident-ai/deepeval",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "microsoft/promptflow",
+      "url": "https://github.com/microsoft/promptflow",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "agencyenterprise/promptinject",
+      "url": "https://github.com/agencyenterprise/promptinject",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "mnns/LLMFuzzer",
+      "url": "https://github.com/mnns/LLMFuzzer",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "JailbreakBench/JailbreakBench",
+      "url": "https://github.com/JailbreakBench/JailbreakBench",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "centerforaisafety/HarmBench",
+      "url": "https://github.com/centerforaisafety/HarmBench",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Trusted-AI/adversarial-robustness-toolbox",
+      "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "bethgelab/foolbox",
+      "url": "https://github.com/bethgelab/foolbox",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "cleverhans-lab/cleverhans",
+      "url": "https://github.com/cleverhans-lab/cleverhans",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "QData/TextAttack",
+      "url": "https://github.com/QData/TextAttack",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "thunlp/OpenAttack",
+      "url": "https://github.com/thunlp/OpenAttack",
+      "categories": [
+        "AI-ATTACK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "xroche/httrack",
+      "url": "https://github.com/xroche/httrack",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "mirror/wget",
+      "url": "https://github.com/mirror/wget",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "curl/curl",
+      "url": "https://github.com/curl/curl",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "wireshark/wireshark",
+      "url": "https://github.com/wireshark/wireshark",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "bettercap/bettercap",
+      "url": "https://github.com/bettercap/bettercap",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "aircrack-ng/aircrack-ng",
+      "url": "https://github.com/aircrack-ng/aircrack-ng",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "kismetwireless/kismet",
+      "url": "https://github.com/kismetwireless/kismet",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "ZerBea/hcxdumptool",
+      "url": "https://github.com/ZerBea/hcxdumptool",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "ZerBea/hcxtools",
+      "url": "https://github.com/ZerBea/hcxtools",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "hashcat/hashcat",
+      "url": "https://github.com/hashcat/hashcat",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "s0lst1c3/eaphammer",
+      "url": "https://github.com/s0lst1c3/eaphammer",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "OpenSecurityResearch/hostapd-wpe",
+      "url": "https://github.com/OpenSecurityResearch/hostapd-wpe",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "fox-it/mitm6",
+      "url": "https://github.com/fox-it/mitm6",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "lgandx/Responder",
+      "url": "https://github.com/lgandx/Responder",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "mitmproxy/mitmproxy",
+      "url": "https://github.com/mitmproxy/mitmproxy",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "zaproxy/zaproxy",
+      "url": "https://github.com/zaproxy/zaproxy",
+      "categories": [
+        "NETWORK"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "SeleniumHQ/selenium",
+      "url": "https://github.com/SeleniumHQ/selenium",
+      "categories": [
+        "WEB"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "puppeteer/puppeteer",
+      "url": "https://github.com/puppeteer/puppeteer",
+      "categories": [
+        "WEB"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "microsoft/playwright",
+      "url": "https://github.com/microsoft/playwright",
+      "categories": [
+        "WEB"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "waylan/beautifulsoup",
+      "url": "https://github.com/waylan/beautifulsoup",
+      "categories": [
+        "WEB"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "scrapy/scrapy",
+      "url": "https://github.com/scrapy/scrapy",
+      "categories": [
+        "WEB"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "lelinhtinh/de4js",
+      "url": "https://github.com/lelinhtinh/de4js",
+      "categories": [
+        "JS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "prettier/prettier",
+      "url": "https://github.com/prettier/prettier",
+      "categories": [
+        "JS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "babel/babel",
+      "url": "https://github.com/babel/babel",
+      "categories": [
+        "JS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "pegjs/pegjs",
+      "url": "https://github.com/pegjs/pegjs",
+      "categories": [
+        "JS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "nicolo-ribaudo/sourcemap-decoder",
+      "url": "https://github.com/nicolo-ribaudo/sourcemap-decoder",
+      "categories": [
+        "JS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "AutoHotkey/AutoHotkey",
+      "url": "https://github.com/AutoHotkey/AutoHotkey",
+      "categories": [
+        "AUTOMATION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "pywinauto/pywinauto",
+      "url": "https://github.com/pywinauto/pywinauto",
+      "categories": [
+        "AUTOMATION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "yinkaisheng/Python-UIAutomation-for-Windows",
+      "url": "https://github.com/yinkaisheng/Python-UIAutomation-for-Windows",
+      "categories": [
+        "AUTOMATION"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "trufflesecurity/trufflehog",
+      "url": "https://github.com/trufflesecurity/trufflehog",
+      "categories": [
+        "SECRETS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "gitleaks/gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "categories": [
+        "SECRETS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Yelp/detect-secrets",
+      "url": "https://github.com/Yelp/detect-secrets",
+      "categories": [
+        "SECRETS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "GitGuardian/ggshield",
+      "url": "https://github.com/GitGuardian/ggshield",
+      "categories": [
+        "SECRETS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "SecureAuthCorp/impacket",
+      "url": "https://github.com/SecureAuthCorp/impacket",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "topotam/PetitPotam",
+      "url": "https://github.com/topotam/PetitPotam",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "p0dalirius/Coercer",
+      "url": "https://github.com/p0dalirius/Coercer",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Ridter/noPac",
+      "url": "https://github.com/Ridter/noPac",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ShutdownRepo/ShadowCoerce",
+      "url": "https://github.com/ShutdownRepo/ShadowCoerce",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ly4k/Certipy",
+      "url": "https://github.com/ly4k/Certipy",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "dirkjanm/krbrelayx",
+      "url": "https://github.com/dirkjanm/krbrelayx",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "SpecterOps/BloodHound",
+      "url": "https://github.com/SpecterOps/BloodHound",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "BloodHoundAD/SharpHound",
+      "url": "https://github.com/BloodHoundAD/SharpHound",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "fox-it/BloodHound.py",
+      "url": "https://github.com/fox-it/BloodHound.py",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "ShutdownRepo/PyWhisker",
+      "url": "https://github.com/ShutdownRepo/PyWhisker",
+      "categories": [
+        "AD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "BishopFox/sliver",
+      "url": "https://github.com/BishopFox/sliver",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "HavocFramework/Havoc",
+      "url": "https://github.com/HavocFramework/Havoc",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "its-a-feature/Mythic",
+      "url": "https://github.com/its-a-feature/Mythic",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "cobbr/Covenant",
+      "url": "https://github.com/cobbr/Covenant",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Ne0nd0g/merlin",
+      "url": "https://github.com/Ne0nd0g/merlin",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "nettitude/PoshC2",
+      "url": "https://github.com/nettitude/PoshC2",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "BC-SECURITY/Empire",
+      "url": "https://github.com/BC-SECURITY/Empire",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "BC-SECURITY/Starkiller",
+      "url": "https://github.com/BC-SECURITY/Starkiller",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "antonioCoco/SharPyShell",
+      "url": "https://github.com/antonioCoco/SharPyShell",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "chvancooten/Nimplant",
+      "url": "https://github.com/chvancooten/Nimplant",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "trustedsec/TrevorC2",
+      "url": "https://github.com/trustedsec/TrevorC2",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "Arno0x/DNSExfiltrator",
+      "url": "https://github.com/Arno0x/DNSExfiltrator",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "yarrick/iodine",
+      "url": "https://github.com/yarrick/iodine",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "iagox86/dnscat2",
+      "url": "https://github.com/iagox86/dnscat2",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "loneicewolf/koadic",
+      "url": "https://github.com/loneicewolf/koadic",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "GreatSCT/GreatSCT",
+      "url": "https://github.com/GreatSCT/GreatSCT",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "TheWover/donut",
+      "url": "https://github.com/TheWover/donut",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "optiv/Freeze",
+      "url": "https://github.com/optiv/Freeze",
+      "categories": [
+        "C2"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "research_only"
+    },
+    {
+      "repo": "frida/frida",
+      "url": "https://github.com/frida/frida",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "sensepost/objection",
+      "url": "https://github.com/sensepost/objection",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "skylot/jadx",
+      "url": "https://github.com/skylot/jadx",
+      "categories": [
+        "MOBILE",
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "iBotPeaches/Apktool",
+      "url": "https://github.com/iBotPeaches/Apktool",
+      "categories": [
+        "MOBILE",
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "pxb1988/dex2jar",
+      "url": "https://github.com/pxb1988/dex2jar",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "google/enjarify",
+      "url": "https://github.com/google/enjarify",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "CalebFenton/simplify",
+      "url": "https://github.com/CalebFenton/simplify",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "DexPatcher/dexpatcher-tool",
+      "url": "https://github.com/DexPatcher/dexpatcher-tool",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "liaojack8/AndroidKiller",
+      "url": "https://github.com/liaojack8/AndroidKiller",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "charles2gan/GDA-android-reversing-Tool",
+      "url": "https://github.com/charles2gan/GDA-android-reversing-Tool",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "MobSF/Mobile-Security-Framework-MobSF",
+      "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "WithSecureLabs/drozer",
+      "url": "https://github.com/WithSecureLabs/drozer",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "rovo89/Xposed",
+      "url": "https://github.com/rovo89/Xposed",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "ElderDrivers/EdXposed",
+      "url": "https://github.com/ElderDrivers/EdXposed",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "LSPosed/LSPosed",
+      "url": "https://github.com/LSPosed/LSPosed",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "topjohnwu/Magisk",
+      "url": "https://github.com/topjohnwu/Magisk",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "Dr-TSNG/ZygiskNext",
+      "url": "https://github.com/Dr-TSNG/ZygiskNext",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "RikkaApps/Riru",
+      "url": "https://github.com/RikkaApps/Riru",
+      "categories": [
+        "MOBILE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "chipsec/chipsec",
+      "url": "https://github.com/chipsec/chipsec",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "LongSoft/UEFITool",
+      "url": "https://github.com/LongSoft/UEFITool",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "flashrom/flashrom",
+      "url": "https://github.com/flashrom/flashrom",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "coreboot/coreboot",
+      "url": "https://github.com/coreboot/coreboot",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "linuxboot/linuxboot",
+      "url": "https://github.com/linuxboot/linuxboot",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "linuxboot/heads",
+      "url": "https://github.com/linuxboot/heads",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "qemu/qemu",
+      "url": "https://github.com/qemu/qemu",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "rampageX/firmware-mod-kit",
+      "url": "https://github.com/rampageX/firmware-mod-kit",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ReFirmLabs/binwalk",
+      "url": "https://github.com/ReFirmLabs/binwalk",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "firmadyne/firmadyne",
+      "url": "https://github.com/firmadyne/firmadyne",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "fkie-cad/FACT_core",
+      "url": "https://github.com/fkie-cad/FACT_core",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "e-m-b-a/emba",
+      "url": "https://github.com/e-m-b-a/emba",
+      "categories": [
+        "FIRMWARE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "returntocorp/semgrep",
+      "url": "https://github.com/returntocorp/semgrep",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "github/codeql",
+      "url": "https://github.com/github/codeql",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "joernio/joern",
+      "url": "https://github.com/joernio/joern",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "SonarSource/sonarqube",
+      "url": "https://github.com/SonarSource/sonarqube",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "snyk/snyk",
+      "url": "https://github.com/snyk/snyk",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "dependabot/dependabot-core",
+      "url": "https://github.com/dependabot/dependabot-core",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "renovatebot/renovate",
+      "url": "https://github.com/renovatebot/renovate",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ossf/scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "quay/clair",
+      "url": "https://github.com/quay/clair",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "notaryproject/notary",
+      "url": "https://github.com/notaryproject/notary",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "docker/docker-bench-security",
+      "url": "https://github.com/docker/docker-bench-security",
+      "categories": [
+        "SAST"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/kube-hunter",
+      "url": "https://github.com/aquasecurity/kube-hunter",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/kube-bench",
+      "url": "https://github.com/aquasecurity/kube-bench",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "kubescape/kubescape",
+      "url": "https://github.com/kubescape/kubescape",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "anchore/grype",
+      "url": "https://github.com/anchore/grype",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "anchore/syft",
+      "url": "https://github.com/anchore/syft",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sigstore/cosign",
+      "url": "https://github.com/sigstore/cosign",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "kyverno/kyverno",
+      "url": "https://github.com/kyverno/kyverno",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "open-policy-agent/gatekeeper",
+      "url": "https://github.com/open-policy-agent/gatekeeper",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "open-policy-agent/opa",
+      "url": "https://github.com/open-policy-agent/opa",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "falcosecurity/falco",
+      "url": "https://github.com/falcosecurity/falco",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/tracee",
+      "url": "https://github.com/aquasecurity/tracee",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "inspektor-gadget/inspektor-gadget",
+      "url": "https://github.com/inspektor-gadget/inspektor-gadget",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/kubectl-who-can",
+      "url": "https://github.com/aquasecurity/kubectl-who-can",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "FairwindsOps/rbac-lookup",
+      "url": "https://github.com/FairwindsOps/rbac-lookup",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Shopify/kubeaudit",
+      "url": "https://github.com/Shopify/kubeaudit",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Checkmarx/kics",
+      "url": "https://github.com/Checkmarx/kics",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "bridgecrewio/checkov",
+      "url": "https://github.com/bridgecrewio/checkov",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "aquasecurity/tfsec",
+      "url": "https://github.com/aquasecurity/tfsec",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "tenable/terrascan",
+      "url": "https://github.com/tenable/terrascan",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "prowler-cloud/prowler",
+      "url": "https://github.com/prowler-cloud/prowler",
+      "categories": [
+        "K8S"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "nccgroup/ScoutSuite",
+      "url": "https://github.com/nccgroup/ScoutSuite",
+      "categories": [
+        "CLOUD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "cloudsploit/scans",
+      "url": "https://github.com/cloudsploit/scans",
+      "categories": [
+        "CLOUD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "RhinoSecurityLabs/pacu",
+      "url": "https://github.com/RhinoSecurityLabs/pacu",
+      "categories": [
+        "CLOUD"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "crytic/slither",
+      "url": "https://github.com/crytic/slither",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ConsenSys/mythril",
+      "url": "https://github.com/ConsenSys/mythril",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "crytic/echidna",
+      "url": "https://github.com/crytic/echidna",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "foundry-rs/foundry",
+      "url": "https://github.com/foundry-rs/foundry",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "NomicFoundation/hardhat",
+      "url": "https://github.com/NomicFoundation/hardhat",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "a16z/halmos",
+      "url": "https://github.com/a16z/halmos",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ConsenSys/scribble",
+      "url": "https://github.com/ConsenSys/scribble",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "protofire/solhint",
+      "url": "https://github.com/protofire/solhint",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "raineorshine/solgraph",
+      "url": "https://github.com/raineorshine/solgraph",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ConsenSys/surya",
+      "url": "https://github.com/ConsenSys/surya",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "OpenZeppelin/openzeppelin-contracts",
+      "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "transmissions11/solmate",
+      "url": "https://github.com/transmissions11/solmate",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "flashbots/mev-boost",
+      "url": "https://github.com/flashbots/mev-boost",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sigp/lighthouse",
+      "url": "https://github.com/sigp/lighthouse",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ConsenSys/teku",
+      "url": "https://github.com/ConsenSys/teku",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "prysmaticlabs/prysm",
+      "url": "https://github.com/prysmaticlabs/prysm",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "status-im/nimbus-eth2",
+      "url": "https://github.com/status-im/nimbus-eth2",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "ChainSafe/lodestar",
+      "url": "https://github.com/ChainSafe/lodestar",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sigstore/sigstore",
+      "url": "https://github.com/sigstore/sigstore",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sigstore/fulcio",
+      "url": "https://github.com/sigstore/fulcio",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sigstore/rekor",
+      "url": "https://github.com/sigstore/rekor",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "in-toto/in-toto",
+      "url": "https://github.com/in-toto/in-toto",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "slsa-framework/slsa",
+      "url": "https://github.com/slsa-framework/slsa",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "tektoncd/pipeline",
+      "url": "https://github.com/tektoncd/pipeline",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "step-security/harden-runner",
+      "url": "https://github.com/step-security/harden-runner",
+      "categories": [
+        "SMARTCONTRACT"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "tandasat/MiniVisor",
+      "url": "https://github.com/tandasat/MiniVisor",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "ionescu007/SimpleVisor",
+      "url": "https://github.com/ionescu007/SimpleVisor",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "theopolis/uefi-firmware-parser",
+      "url": "https://github.com/theopolis/uefi-firmware-parser",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "winsiderss/phnt",
+      "url": "https://github.com/winsiderss/phnt",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "j00ru/windows-syscall-processing",
+      "url": "https://github.com/j00ru/windows-syscall-processing",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "Zero-Memory/EDR-Blocker",
+      "url": "https://github.com/Zero-Memory/EDR-Blocker",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "google/project-zero",
+      "url": "https://github.com/google/project-zero",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "bensadeh/zenith",
+      "url": "https://github.com/bensadeh/zenith",
+      "categories": [
+        "EXTRA_RE"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "ReClassNET/ReClass.NET",
+      "url": "https://github.com/ReClassNET/ReClass.NET",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "horsicq/Detect-It-Easy",
+      "url": "https://github.com/horsicq/Detect-It-Easy",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "dnSpyEx/dnSpy",
+      "url": "https://github.com/dnSpyEx/dnSpy",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "0xd4d/dnlib",
+      "url": "https://github.com/0xd4d/dnlib",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "de4dot/de4dot",
+      "url": "https://github.com/de4dot/de4dot",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "BepInEx/BepInEx",
+      "url": "https://github.com/BepInEx/BepInEx",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "pardeike/Harmony",
+      "url": "https://github.com/pardeike/Harmony",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "SamboyCoding/Cpp2IL",
+      "url": "https://github.com/SamboyCoding/Cpp2IL",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "memflow/memflow",
+      "url": "https://github.com/memflow/memflow",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "x64dbg/x64dbg",
+      "url": "https://github.com/x64dbg/x64dbg",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "x64dbg/ScyllaHide",
+      "url": "https://github.com/x64dbg/ScyllaHide",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "NtQuery/Scylla",
+      "url": "https://github.com/NtQuery/Scylla",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "LordNoteworthy/al-khaser",
+      "url": "https://github.com/LordNoteworthy/al-khaser",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "yamadashy/repomix",
+      "url": "https://github.com/yamadashy/repomix",
+      "categories": [
+        "EXTRA_TOOLS"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "manual_review"
+    },
+    {
+      "repo": "mrdoob/three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "mromidev/claude-animated-shorts",
+      "url": "https://github.com/mromidev/claude-animated-shorts",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "DarkyHArry/Jailbreak-AI",
+      "url": "https://github.com/DarkyHArry/Jailbreak-AI",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "lalipa2003-arch/JailbreakHub",
+      "url": "https://github.com/lalipa2003-arch/JailbreakHub",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sirioberati/Genjustsu-Open-Source-Workflow",
+      "url": "https://github.com/sirioberati/Genjustsu-Open-Source-Workflow",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "sandeco/reversa",
+      "url": "https://github.com/sandeco/reversa",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "LeiteZ/fluxo-de-edicao",
+      "url": "https://github.com/LeiteZ/fluxo-de-edicao",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    },
+    {
+      "repo": "mazzeoia/mazyos-scraper",
+      "url": "https://github.com/mazzeoia/mazyos-scraper",
+      "categories": [
+        "CREATOR"
+      ],
+      "review_status": "not_verified",
+      "clone_permission": "none",
+      "scope": "read_only"
+    }
+  ]
+}
