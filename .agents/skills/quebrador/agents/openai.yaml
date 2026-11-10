@@ -9,7 +9,7 @@ policy:
     - name: "Foco No Progresso"
       type: "skill"
       owner: "dSanT"
-      version: "1.2.1"
+      version: "1.3.0"
       description: "Coordenador universal de pesquisa e aprendizado com 288+ repositórios, 30 MCPs, 32 skills, sites, YouTube e ferramentas criativas"
       lanes:
         - core

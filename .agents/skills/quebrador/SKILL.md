@@ -1,6 +1,6 @@
 ---
 name: quebrador
-version: 1.2.1
+version: 1.3.0
 description: Skill universal Quebrador — Foco No Progresso. Coordenador de pesquisa rastreável, engenharia reversa de vídeos, estudo de repositórios, catálogos de segurança, ferramentas criativas e automação supervisionada.
 ---
 
@@ -52,6 +52,7 @@ python3 scripts/quebrador.py intake URL       # registra referência na fila
 python3 scripts/quebrador.py video-url URL    # metadados/legendas de vídeo online
 python3 scripts/quebrador.py video PATH       # analisa vídeo local
 python3 scripts/quebrador.py check-repos      # verifica metadados públicos
+python3 scripts/quebrador.py check-repos --backend search --all  # catálogo inteiro pela busca do GitHub (gh)
 python3 scripts/quebrador.py clone-approved REPO --approve  # clone de fonte verificada
 python3 scripts/quebrador.py validate         # valida consistência dos catálogos
 python3 scripts/quebrador.py report           # gera relatório de status
@@ -73,6 +74,8 @@ Escada de prioridade para transcrições:
 2. **vidIQ** `vidiq_video_transcript` (5 créditos por chamada, somente com confirmação do usuário)
 3. **Plugins gratuitos** (TubeAlfred YouTube, YouTube Transcriber, Arcmira, watch-video)
 4. **Arquivo fornecido** pelo usuário (JSON3, VTT, SRT)
+
+Estudos prontos ficam em `references/youtube/estudos/<id>.study.md`, com o nível de evidência declarado e status `pendente_de_revisao` até o dono revisar. Cada estudo separa técnicas transferíveis do que não se aplica por conflitar com a política.
 
 Nunca declarar que assistiu um vídeo sem prova. Sem mídia = não alegar análise de frames ou áudio. Título do vídeo não é conteúdo.
 

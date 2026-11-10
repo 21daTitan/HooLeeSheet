@@ -1,20 +1,24 @@
 {
-  "notice": "Referências fornecidas pelo usuário. Conteúdo NÃO assistido nem validado. Títulos são rótulos do usuário, não verificação.",
-  "version": "1.1.0",
+  "notice": "Referências fornecidas pelo dono. Oito vídeos estudados somente por legendas; playlist e canal não revisados. Nenhum estudo foi revisado pelo dono.",
+  "version": "1.3.0",
   "entries": [
     {
       "url": "https://youtube.com/playlist?list=PLBPobzL8BYoHZPSfnfrPR02eE5Xb4JeLi",
       "titulo_fornecido": "Playlist para Estudo e Uso como HackingTool",
       "setor": "security_defensive",
       "tipo": "playlist",
-      "status": "nao_revisado"
+      "status": "nao_revisado",
+      "motivo": "YouTube bloqueado na rede do ambiente; não foi possível listar os vídeos"
     },
     {
       "url": "https://youtu.be/e2Fykz51Nxg",
       "titulo_fornecido": "Documentário Estilo Netflix - ClaudeCode",
       "setor": "creator",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/e2Fykz51Nxg.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente"
     },
     {
       "url": "https://youtu.be/zGimjuSqH5E",
@@ -22,7 +26,11 @@
       "setor": "creator",
       "tipo": "video",
       "nota": "Somente referências de voz com consentimento verificável; sem impersonação",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/zGimjuSqH5E.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente",
+      "observacao": "Uso central (voz de terceiro sem consentimento) bloqueado pela política"
     },
     {
       "url": "https://youtu.be/iOr1mbFK7G8",
@@ -30,49 +38,71 @@
       "setor": "marketing",
       "tipo": "video",
       "nota": "Marketing legal e verdadeiro somente",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/iOr1mbFK7G8.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente"
     },
     {
       "url": "https://youtu.be/AWbpxJPzltc",
       "titulo_fornecido": "Sem título fornecido",
       "setor": "marketing",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/AWbpxJPzltc.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente",
+      "observacao": "Conteúdo quase todo fora do escopo (evasão de plataforma)"
     },
     {
       "url": "https://youtu.be/t9qAIgaguRY",
       "titulo_fornecido": "Contingência de nicho hot",
       "setor": "hot_creator",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/t9qAIgaguRY.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente",
+      "observacao": "Estratégia central fora do escopo (evasão de sanção)"
     },
     {
       "url": "https://youtu.be/1vDxSy3xov4",
       "titulo_fornecido": "Aprenda a vender qualquer coisa",
       "setor": "marketing",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/1vDxSy3xov4.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente"
     },
     {
       "url": "https://youtu.be/hEBmmSCZODg",
       "titulo_fornecido": "Sem título",
       "setor": "core",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/hEBmmSCZODg.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente",
+      "observacao": "Sugestão: reclassificar de core para marketing"
     },
     {
       "url": "https://youtu.be/YAYRxSe0Oaw",
       "titulo_fornecido": "Nicho Hot criativo",
       "setor": "hot_creator",
       "tipo": "video",
-      "status": "nao_revisado"
+      "status": "legendas_analisadas",
+      "estudo": "estudos/YAYRxSe0Oaw.study.md",
+      "evidencia": "somente legendas (vidIQ, 2026-11-10)",
+      "revisao_do_dono": "pendente"
     },
     {
       "url": "https://youtube.com/@blackghost.ai01",
       "titulo_fornecido": "Canal de referência",
       "setor": "creator",
       "tipo": "canal",
-      "status": "nao_revisado"
+      "status": "nao_revisado",
+      "motivo": "YouTube bloqueado na rede do ambiente; não foi possível listar os vídeos"
     }
   ]
 }

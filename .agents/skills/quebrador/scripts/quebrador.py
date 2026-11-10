@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Foco No Progresso — Quebrador CLI v1.2.1
+"""Foco No Progresso — Quebrador CLI v1.3.0
 
 Sem dependências externas obrigatórias. Backends opcionais para análise audiovisual.
 Nenhum código de terceiros é executado, instalado ou clonado sem autorização.
@@ -202,7 +202,110 @@ def _github_metadata(slug: str, timeout: int = 12):
         return {'status': 'temporary_error', 'reason': type(exc).__name__}
 
 
+def search_batches(slugs: list[str], size: int = 5, max_query: int = 240) -> list[list[str]]:
+    """Agrupa slugs em lotes que cabem no limite de tamanho da busca do GitHub."""
+    batches, current = [], []
+    for slug in slugs:
+        candidate = current + [slug]
+        if current and (len(candidate) > size or len(_search_query(candidate)) > max_query):
+            batches.append(current)
+            current = [slug]
+        else:
+            current = candidate
+    if current:
+        batches.append(current)
+    return batches
+
+
+def _search_query(slugs: list[str]) -> str:
+    return ' '.join('repo:' + s for s in slugs) + ' fork:true'
+
+
+def _gh_search(slugs: list[str], timeout: int = 40) -> dict | None:
+    """Metadados por nome canônico (casefold); None quando nenhum slug existe (HTTP 422)."""
+    proc = subprocess.run(['gh', 'api', '-X', 'GET', 'search/repositories', '-f', 'q=' + _search_query(slugs),
+                           '-f', 'per_page=100'], capture_output=True, text=True, timeout=timeout)
+    if proc.returncode:
+        if 'HTTP 422' in proc.stderr:
+            return None
+        raise RuntimeError((proc.stderr or proc.stdout).strip()[-300:] or 'gh api falhou')
+    found = {}
+    for item in json.loads(proc.stdout).get('items', []):
+        found[item['full_name'].casefold()] = {
+            'status': 'found', 'method': 'search', 'canonical_name': item['full_name'],
+            'archived': bool(item.get('archived')), 'disabled': bool(item.get('disabled')),
+            'fork': bool(item.get('fork')), 'visibility': item.get('visibility', 'unknown'),
+            'default_branch': item.get('default_branch'),
+            'license': (item.get('license') or {}).get('spdx_id'),
+            'pushed_at': item.get('pushed_at'), 'description': str(item.get('description') or '')[:200]}
+    return found
+
+
+NOT_FOUND = {'status': 'not_found', 'method': 'search',
+             'reason': 'Busca não encontrou; inexistente, privado, removido ou renomeado'}
+
+
+def check_repos_search(args, pause=time.sleep):
+    """Verifica o catálogo pela busca do GitHub, em lotes; não clona nem baixa código."""
+    if not shutil.which('gh'):
+        raise RuntimeError('gh ausente; o backend search depende do GitHub CLI')
+    slugs = [r['repo'] for r in load_json(CATALOG, {'entries': []})['entries']]
+    if not args.all:
+        slugs = slugs[:args.limit]
+    state = load_json(STATE / 'repo-health.json', {'cursor': 0, 'repositories': {}})
+    results = state.get('repositories', {})
+    changed, queries = [], 0
+
+    def query(group):
+        nonlocal queries
+        if queries:
+            pause(2.2)
+        queries += 1
+        try:
+            return _gh_search(group)
+        except RuntimeError as exc:
+            if 'rate limit' not in str(exc).lower():
+                raise
+            pause(65)
+            return _gh_search(group)
+
+    def store(slug, result):
+        if results.get(slug) != result:
+            changed.append({'repo': slug, 'previous': results.get(slug), 'current': result})
+        results[slug] = result
+        print(f"[{result['status']}] {slug}")
+
+    pending = []
+    for group in search_batches(slugs):
+        found = query(group) or {}
+        for slug in group:
+            if slug.casefold() in found:
+                store(slug, found[slug.casefold()])
+            else:
+                pending.append(slug)
+    for slug in pending:
+        found = query([slug])
+        if not found:
+            store(slug, dict(NOT_FOUND))
+        else:
+            result = dict(next(iter(found.values())))
+            if result['canonical_name'].casefold() != slug.casefold():
+                result['renamed_from'] = slug
+            store(slug, result)
+    count = Counter(results[s]['status'] for s in slugs)
+    state['repositories'] = results
+    save_json(STATE / 'repo-health.json', state)
+    save_json(STATE / 'repo-delta.json', {'generated_utc': stamp(), 'changes': changed,
+                                          'checked': dict(count), 'processed': len(slugs)})
+    append_history('check-repos-search', {'processed': len(slugs), 'states': dict(count), 'queries': queries})
+    print('RELATÓRIO:', json.dumps({'processados': len(slugs), 'consultas': queries, 'estados': dict(count),
+                                    'mudanças': len(changed)}, ensure_ascii=False))
+    return results
+
+
 def check_repos(args):
+    if args.backend == 'search':
+        return check_repos_search(args)
     doc = load_json(CATALOG, {'entries': []})
     records = doc['entries']
     if not records:
@@ -745,6 +848,8 @@ def main():
     p.add_argument('--approve', action='store_true')
 
     p = sub.add_parser('check-repos', help='Verifica metadados públicos dos repos')
+    p.add_argument('--backend', choices=['api', 'search'], default='api', help='search usa gh api search/repositories')
+    p.add_argument('--all', action='store_true', help='Catálogo inteiro (só com --backend search)')
     p.add_argument('--limit', type=int, default=20)
     p.add_argument('--timeout', type=int, default=12)
 
@@ -769,7 +874,9 @@ def main():
     p.add_argument('--timeout', type=int, default=300)
 
     args = parser.parse_args()
-    if args.cmd == 'check-repos' and not (1 <= args.limit <= 30):
+    if args.cmd == 'check-repos' and args.all and args.backend != 'search':
+        parser.error('--all só vale com --backend search')
+    if args.cmd == 'check-repos' and not args.all and not (1 <= args.limit <= 30):
         parser.error('--limit deve ser 1..30 (segurança de rate limit da API GitHub)')
     try:
         globals()[args.cmd.replace('-', '_')](args)

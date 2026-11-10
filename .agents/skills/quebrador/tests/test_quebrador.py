@@ -89,11 +89,20 @@ class CatalogTest(unittest.TestCase):
     def test_youtube_catalog_structure(self):
         data = json.loads((ROOT / 'references/youtube/fontes-aprendizado.json').read_text())
         self.assertIn('entries', data)
-        self.assertTrue(all(e.get('status') == 'nao_revisado' for e in data['entries']))
+        required = ('**Evidência**', '## Técnicas transferíveis', '## Lacunas', 'pendente_de_revisao', 'somente legendas')
+        studied = [e for e in data['entries'] if e['status'] == 'legendas_analisadas']
+        self.assertEqual(len(studied), 8)
+        for entry in data['entries']:
+            self.assertIn(entry['status'], ('nao_revisado', 'legendas_analisadas', 'bloqueado'))
+        for entry in studied:
+            text = (ROOT / 'references/youtube' / entry['estudo']).read_text()
+            for marker in required:
+                self.assertIn(marker, text, entry['estudo'])
+            self.assertEqual(entry['revisao_do_dono'], 'pendente')
 
     def test_policy_version(self):
         cfg = json.loads((ROOT / 'config/policy.json').read_text())
-        self.assertEqual(cfg['version'], '1.2.1')
+        self.assertEqual(cfg['version'], '1.3.0')
 
     def test_validate_json_files(self):
         for jfile in (ROOT / 'references').rglob('*.json'):
@@ -217,6 +226,44 @@ class HistoryTest(unittest.TestCase):
             path.write_text(json.dumps(history))
             with mock.patch('builtins.print'), self.assertRaises(RuntimeError):
                 quebrador.record(argparse.Namespace(verify=True))
+
+
+class RepoSearchTest(unittest.TestCase):
+    def test_batches_respect_size_and_query_length(self):
+        slugs = [f'owner{i}/repo{i}' for i in range(12)] + ['OWASP/www-project-top-10-for-large-language-model-applications'] * 4
+        batches = quebrador.search_batches(slugs)
+        self.assertEqual([s for b in batches for s in b], slugs)
+        self.assertTrue(all(len(b) <= 5 and len(quebrador._search_query(b)) <= 240 for b in batches))
+        self.assertTrue(quebrador._search_query(['a/b']).endswith('fork:true'))
+
+    def test_found_missing_and_renamed(self):
+        catalog = {'entries': [{'repo': r} for r in ('A/one', 'b/two', 'c/gone', 'd/old')]}
+
+        def fake_run(cmd, **kw):
+            query = next(c for c in cmd if c.startswith('q='))
+            slugs = [w[5:] for w in query[2:].split() if w.startswith('repo:')]
+            names = {'A/one': 'a/One', 'b/two': 'b/two', 'd/old': 'd/new'}
+            if len(slugs) > 1:
+                names.pop('d/old')
+            items = [{'full_name': names[s], 'archived': s == 'b/two', 'license': {'spdx_id': 'MIT'}}
+                     for s in slugs if s in names]
+            if not items:
+                return mock.Mock(returncode=1, stdout='{}', stderr='gh: Validation Failed (HTTP 422)')
+            return mock.Mock(returncode=0, stdout=json.dumps({'items': items}), stderr='')
+
+        args = argparse.Namespace(all=True, limit=20, backend='search')
+        with tempfile.TemporaryDirectory() as tmp, \
+                mock.patch.object(quebrador, 'STATE', Path(tmp)), \
+                mock.patch.object(quebrador, 'load_json', side_effect=lambda p, d: catalog if p == quebrador.CATALOG else d), \
+                mock.patch.object(quebrador.shutil, 'which', return_value='/usr/bin/gh'), \
+                mock.patch.object(quebrador.subprocess, 'run', fake_run), \
+                mock.patch('builtins.print'):
+            results = quebrador.check_repos_search(args, pause=lambda s: None)
+        self.assertEqual(results['A/one']['canonical_name'], 'a/One')
+        self.assertTrue(results['b/two']['archived'])
+        self.assertEqual(results['c/gone']['status'], 'not_found')
+        self.assertEqual(results['d/old']['renamed_from'], 'd/old')
+        self.assertEqual(results['d/old']['canonical_name'], 'd/new')
 
 
 if __name__ == '__main__':

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0 — 2026-11-10
+- `check-repos --backend search --all`: verifica o catálogo inteiro pela busca do GitHub (`gh`), em lotes
+- Oito estudos de vídeo em `references/youtube/estudos/`, feitos só por legendas (vidIQ, 40 créditos), pendentes de revisão do dono
+- Cada estudo separa técnicas transferíveis do que conflita com a política (voz de terceiros, evasão de plataforma, anúncio camuflado, história falsa)
+- Playlist e canal seguem não revisados: YouTube bloqueado na rede do ambiente
+
 ## 1.2.1 — 2026-11-10
 - Subcomando `catalog` para consultar repos, MCPs, skills, sites, criativo, externos e YouTube (o SKILL.md citava comandos que não existiam)
 - Histórico encadeado passa a ser gravado (`intake`, `clone-approved`, `sfx --download`, `tts`); `record --verify` acusa adulteração
