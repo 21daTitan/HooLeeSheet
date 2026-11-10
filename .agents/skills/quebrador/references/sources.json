@@ -7,7 +7,7 @@
     "skills": {"catalog": "security/skills-catalog.md", "count": 32, "scope": "inventário, não instalados"},
     "websites": {"catalog": "websites/", "count": 5, "scope": "bancos de exploits, vulnerabilidades, rede, hash, anonimato"},
     "youtube": {"catalog": "youtube/fontes-aprendizado.json", "count": 10, "scope": "fila de estudo, não assistidos"},
-    "creative": {"catalog": "creative/", "count": 2, "scope": "ferramentas de design e inspiração"},
+    "creative": {"catalog": "creative/", "count": 3, "scope": "ferramentas de design, inspiração e áudio/efeitos sonoros"},
     "external": {"catalog": "external/", "count": 2, "scope": "projetos GitHub e recursos de aprendizado"}
   },
   "youtube": [

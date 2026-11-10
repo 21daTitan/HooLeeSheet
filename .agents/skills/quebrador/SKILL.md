@@ -17,6 +17,7 @@ Antes de qualquer ação, leia `MASTER_PROMPT_UNIVERSAL.txt`. Dados em `referenc
 - Consulta a servidores MCP (30 no inventário) e skills (32 no inventário)
 - Sites de exploit databases, vulnerabilidades, ferramentas de rede
 - Ferramentas de design com IA (Recraft, Runway, Leonardo, CapCut, etc.)
+- Áudio: TTS/clonagem de voz (Fish Speech auto-hospedado) e efeitos sonoros (AudioGen, Freesound)
 - Projetos externos GitHub e recursos de aprendizado
 - Auditorias defensivas, CTF, bug bounty e educação
 - Automações supervisionadas com proposta antes de execução
@@ -39,7 +40,7 @@ Antes de qualquer ação, leia `MASTER_PROMPT_UNIVERSAL.txt`. Dados em `referenc
 | Superfície | `security/attack-surface-map.md` | — | "como atacar/defender AD", "cenário K8S" |
 | Sites | `websites/*.md` | `web` | "bancos de exploits", "ferramentas de rede" |
 | YouTube | `youtube/fontes-aprendizado.json` | `yt` | "estuda esse vídeo", "engenharia reversa" |
-| Criativo | `creative/*.md` | `creative` | "IAs pra logo", "ferramentas de vídeo" |
+| Criativo | `creative/*.md` | `creative` | "IAs pra logo", "ferramentas de vídeo", "voz local", "busca SFX" |
 | Externos | `external/*.md` | `external` | "projetos Three.js", "recursos de estudo" |
 
 ## CLI
