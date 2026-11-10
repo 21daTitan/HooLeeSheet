@@ -266,5 +266,18 @@ class RepoSearchTest(unittest.TestCase):
         self.assertEqual(results['d/old']['canonical_name'], 'd/new')
 
 
+class VerificationSnapshotTest(unittest.TestCase):
+    def test_snapshot_covers_catalog_and_does_not_widen_clone_list(self):
+        snap = json.loads((ROOT / 'references/security/verificacao-repos.json').read_text())
+        catalog = json.loads((ROOT / 'references/repository_catalog.json').read_text())['entries']
+        self.assertEqual(set(snap['repositories']), {r['repo'] for r in catalog})
+        totals = snap['totals']
+        self.assertEqual(totals['found'] + totals['not_found'], totals['catalog'])
+        self.assertEqual(len(snap['not_found']), totals['not_found'])
+        self.assertTrue(all(r['clone_permission'] == 'none' for r in catalog))
+        allowed = json.loads((ROOT / 'references/verification_sample.json').read_text())['confirmed_public']
+        self.assertEqual(len(allowed), 13)
+
+
 if __name__ == '__main__':
     unittest.main()
